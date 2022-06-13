@@ -25,7 +25,14 @@
 	A classic battleship game, where two people can play against each other.
 		
 - Who you’re doing it for, your audience (may be same as the previous question)?
+
+	Our audience is our professor, our class, and anyone else who may be interested in this game/project.
+	
 - Why you’re doing this, the impact or change you hope to make?
+
+	We are doing this because all of our team members seemed interested in creating a game and battleship
+	seemed like a good starting point. We are hoping to gain some experience out of this project for ourselves
+	and learn how to work well with others on a team.
 
 
 ## General Information
