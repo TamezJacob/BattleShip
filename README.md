@@ -17,6 +17,7 @@
 
 ## Description
 - Who you’re working with (you and your team members)?
+	Adrian Pena, Bryce Harmon, Curtis Kelso, Jacob Tamez, Alex Hlavka
 - What you’re creating?
 - Who you’re doing it for, your audience (may be same as the previous question)?
 - Why you’re doing this, the impact or change you hope to make?
