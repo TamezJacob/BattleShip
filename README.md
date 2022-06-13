@@ -21,8 +21,18 @@
 	Adrian Pena, Bryce Harmon, Curtis Kelso, Jacob Tamez, Alex Hlavka
 	
 - What you’re creating?
+
+	We would like to create a classic battleship game where 2 people can play against each other.
+	
 - Who you’re doing it for, your audience (may be same as the previous question)?
+
+	Our professor, our class, and anybody who is interested in the battleship game.
+
 - Why you’re doing this, the impact or change you hope to make?
+
+	All of our team members were interested in creating some kind of a game, and battleship was one
+	that we were all familiar with and seemed like a good starting point as a game to develop. We would
+	like to use this project to gain some experience for ourselves and learn how to work on a team.
 
 
 ## General Information
