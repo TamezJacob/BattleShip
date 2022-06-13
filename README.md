@@ -42,10 +42,21 @@
 ## Features
 List the ready features here:
 - Awesome feature 1
+
 	Changing battleship colors.
+	
 - Awesome feature 2
+
 	Changing the game map.
+	
 - Awesome feature 3
+	
+	Different sized boards
+	
+- Awesome feature 4
+
+	Ability to track missed shots
+	
 
 
 ## Screenshots
