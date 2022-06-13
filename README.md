@@ -16,6 +16,11 @@
 <!-- * [License](#license) -->
 
 ## Description
+- Who you’re working with (you and your team members)?
+- What you’re creating?
+- Who you’re doing it for, your audience (may be same as the previous question)?
+- Why you’re doing this, the impact or change you hope to make?
+
 
 ## General Information
 - Provide general information about your project here.
