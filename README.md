@@ -47,7 +47,11 @@
 List the ready features here:
 - Awesome feature 1
 
-	Changing battleship colors.
+	Name: Custom battleship colors
+
+	Description: Allow the player to choose the color of their battleships from a provided selection before the start of the game.
+
+	User stories: Corresponds to Curtis's user story in which he expresses a desire to play battleship as his favorite color.
 	
 - Awesome feature 2
 
