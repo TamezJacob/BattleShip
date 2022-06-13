@@ -55,7 +55,11 @@ List the ready features here:
 	
 - Awesome feature 2
 
-	Changing the game map.
+	Name: Custom game map
+
+	Description: Allow the player to choose the background map from a provided selection before the start of the game.
+
+	User stories: Corresponds to Jacob and Curtis's user story in which they express a desire to play battleship as on a different selection of maps
 	
 - Awesome feature 3
 	
