@@ -28,8 +28,9 @@
 
 
 ## Technologies Used
-- Javascript, HTML, CSS
+- For coding we are using Javascript, HTML, CSS.
 - Using a github battleship game that is [_here_](https://github.com/kubowania/battleships).
+- For collaboration we are using Bitbucket, Gitkraken, and Jira.
 
 
 
