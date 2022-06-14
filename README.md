@@ -38,31 +38,46 @@
 
 ## Features
 List the ready features here:
+
 - Awesome feature 1
 
-	Name: Custom battleship colors
+	Name: 			Custom battleship colors
 
-	Description: Allow the player to choose the color of their battleships from a provided selection before the start of the game.
+	Description: 	Allow the player to choose the color of their battleships from a provided selection before the start of the game.
 
-	User stories: Corresponds to Curtis's user story in which he expresses a desire to play battleship as his favorite color.
+	User stories: 	Corresponds to Curtis's user story in which he expresses a desire to play battleship as his favorite color.
 	
 - Awesome feature 2
 
-	Name: Custom game map
+	Name: 			Custom game map
 
-	Description: Allow the player to choose the background map from a provided selection before the start of the game.
+	Description: 	Allow the player to choose the background map from a provided selection before the start of the game.
 
-	User stories: Corresponds to Jacob and Curtis's user story in which they express a desire to play battleship as on a different selection of maps
+	User stories:	 Corresponds to Jacob, Alex, and Curtis's user stories in which they express a desire to play battleship as on a different selection of maps
 	
 - Awesome feature 3
 	
-	Different sized boards
+	Name:			Different size boards
+
+	Description: 	Allow the player to choose from a selection of different board sizes to play the game on.
+
+	User stories: 	Corresponds to Jacob and Alex's user stories expressing a desire to play on different sized game maps.
 	
 - Awesome feature 4
 
-	Ability to track missed shots
+	Name: 			Track missed shots
 	
+	Desciption: 	Allow the players the ability to track missed shots.
+	
+	User stories: 	Corresponds to Bryce's user story expressing a desire for a feature to track missed shots.
+	
+- Awesome feature 5
 
+	Name:			Custom number of ships
+	
+	Description:	Allow the players the ability to increase or decrease the number of ships in the game.
+	
+	User stories:	Corresponds to Bryce's user story about adding customizable features, such as the ability to change the number of ships.
 	
 
 
