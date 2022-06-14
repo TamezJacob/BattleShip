@@ -2,9 +2,6 @@
 > Outline a brief description of your project.
 > Live demo [_here_](https://bitbucket.org/cs-3398-su22-gorns/battlespaceship/src/master/). <!-- If you have the project hosted somewhere, include the link here. -->
 
-## General Info
-![Example screenshot](https://i.imgur.com/fniIWoz.jpg)
-<!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Description
 - Who you’re working with (you and your team members)?
@@ -25,6 +22,9 @@
 	seemed like a good starting point. We are hoping to gain some experience out of this project for ourselves
 	and learn how to work well with others on a team.
 
+## General Info
+![Example screenshot](https://i.imgur.com/fniIWoz.jpg)
+<!-- If you have screenshots you'd like to share, include them here. -->
 
 
 ## Technologies Used
