@@ -1,6 +1,5 @@
 # Battle Space Ship
-> Outline a brief description of your project.
-> Live demo [_here_](https://bitbucket.org/cs-3398-su22-gorns/battlespaceship/src/master/). <!-- If you have the project hosted somewhere, include the link here. -->
+ <!-- If you have the project hosted somewhere, include the link here. -->
 
 
 ## Description
@@ -28,8 +27,8 @@
 
 
 ## Technologies Used
-- For coding we are using Javascript, HTML, CSS.
-- Using a github battleship game that is [_here_](https://github.com/kubowania/battleships).
+- For coding we are using Java and JFrame.
+- Using a github battleship game that is [_here_](https://github.com/dankolesnikov/Battleship).
 - For collaboration we are using Bitbucket, Gitkraken, and Jira.
 
 
