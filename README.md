@@ -2,12 +2,9 @@
 > Outline a brief description of your project.
 > Live demo [_here_](https://bitbucket.org/cs-3398-su22-gorns/battlespaceship/src/master/). <!-- If you have the project hosted somewhere, include the link here. -->
 
-## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-<!-- * [License](#license) -->
+## General Info
+![Example screenshot](https://i.imgur.com/fniIWoz.jpg)
+<!-- If you have screenshots you'd like to share, include them here. -->
 
 ## Description
 - Who you’re working with (you and your team members)?
@@ -81,6 +78,4 @@ List the ready features here:
 	
 
 
-## Screenshots
-![Example screenshot](https://i.imgur.com/fniIWoz.jpg)
-<!-- If you have screenshots you'd like to share, include them here. -->
+
