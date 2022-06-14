@@ -31,9 +31,9 @@
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Javascript, HTML, CSS
+- Using a github battleship game that is [_here_](https://github.com/kubowania/battleships).
+
 
 
 ## Features
@@ -62,7 +62,7 @@ List the ready features here:
 
 	Ability to track missed shots
 	
-- Awesome feature 5
+
 	
 
 
