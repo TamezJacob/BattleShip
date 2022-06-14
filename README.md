@@ -23,7 +23,7 @@
 	and learn how to work well with others on a team.
 
 ## General Info
-![Example screenshot](https://i.imgur.com/fniIWoz.jpg)
+![Example screenshot](https://i.imgur.com/fniIWoz.jpg){height=100 width=100}
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
