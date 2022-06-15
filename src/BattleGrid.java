@@ -1,5 +1,3 @@
-package danil;
-
 import javax.swing.*;
 import java.awt.*;
 
