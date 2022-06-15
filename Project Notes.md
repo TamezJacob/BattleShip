@@ -13,7 +13,7 @@
 ## CLASS INFO
 
 **BattleShip.java**  
-	- *main()* class location.
+	- *main()* function location.  
 	- Implements the **GameState.java** interface
 
 **Coordinate.java**  
