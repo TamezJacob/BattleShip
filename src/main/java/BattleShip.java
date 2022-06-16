@@ -1,5 +1,3 @@
-package danil;
-
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
  * @author Minh Phan minh.phan@sjsu.edu

@@ -1,0 +1,10 @@
+GUI INFO
+
+BattleGrid.java
+- Manages the grid where the battle ships are placed and attack. Also has the size of the grid and is where i will manipulate the risize of the board. 
+
+PlayerData.data
+- Creates new ships, deletes ships, add ships to the grid, changes the direction from horizontol to verticle. 
+
+Player Screen.java
+-Where most of the GUI portion of the code is located.

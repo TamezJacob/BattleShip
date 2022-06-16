@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="67dff481-7ffc-4559-800b-6d1431747a22" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/AttackGrid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleGrid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleShip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeginningOfTheGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coordinate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EndOFTheGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiddleOfTheGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SelfGrid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/AttackGrid$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/AttackGrid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/BattleGrid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/BattleShip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/BeginningOfTheGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/Coordinate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/EndOFTheGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/MiddleOfTheGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/PlayerData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/PlayerScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/PlayerScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/SelfGrid$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/SelfGrid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battlespaceship/Ship.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Aea4oz7648Z77CQPfMlpTMh4YA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GameStarter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="BattleShip" />
+      <module name="battlespaceship" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67dff481-7ffc-4559-800b-6d1431747a22" name="Changes" comment="" />
+      <created>1655372315837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655372315837</updated>
+      <workItem from="1655372316865" duration="287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

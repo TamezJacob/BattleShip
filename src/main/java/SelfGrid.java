@@ -1,15 +1,6 @@
-package danil;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import java.util.List;
-
-import danil.PlayerData;
-import danil.BattleGrid;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
