@@ -1,0 +1,2 @@
+Watched the following video tutorial on basic Java GUI implementations and tried them in my own IDE:
+https://www.youtube.com/watch?v=Kmgo00avvEw&t=9389s&ab_channel=BroCode
