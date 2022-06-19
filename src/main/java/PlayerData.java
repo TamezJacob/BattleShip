@@ -13,10 +13,10 @@ public class PlayerData {
     private int[][] selfData = new int[11][11];
     private int numberOfShipSunk = 0;
     private ArrayList<Ship> fleet = new ArrayList<>();
+    private ShipColor playerShipColor;
 
     PlayerData( PlayerScreen player){
         this.player = player;
-
     }
 
     /*All the adding and deleting data methods */
@@ -294,6 +294,15 @@ public class PlayerData {
         return false;
     }
 
+
+    // Setter and getters for the player's ShipColor object
+    public void setShipColor(String shipColor) {
+        this.playerShipColor.setShipColor(shipColor);
+    }
+
+    public String getShipColor() {
+        return this.playerShipColor.getShipColor();
+    }
 
 
     /* For Debugging */

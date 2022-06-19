@@ -16,6 +16,8 @@ public class PlayerScreen extends JFrame {
     JLabel ownShipSunk;
     JLabel shipBeginning;
     JLabel enemyShipSunk;
+    JComboBox playerColorBox;
+    String[] playerColorChoices = {"Cyan", "Red", "Blue", "Yellow", "Green"};
 
     public PlayerScreen(String name, boolean show,BattleShip battleShip) {
         super(name);
@@ -26,6 +28,23 @@ public class PlayerScreen extends JFrame {
         this.add(new JLabel(name), BorderLayout.NORTH);
 
         JButton next = new JButton("next");
+
+        // Define JComboBox for playerColorBox - the box for selecting ship colors
+        playerColorBox = new JComboBox(playerColorChoices);
+
+        // Create an action listener for getting the new color
+        playerColorBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                    if (e.getSource() == playerColorBox) {
+                        System.out.println(playerColorBox.getSelectedItem());
+                    }
+
+                }
+            }
+        );
+        
+
 
         Box verticalBox = Box.createVerticalBox();
 
@@ -50,6 +69,16 @@ public class PlayerScreen extends JFrame {
         enemyShipSunk = new JLabel(""+Integer.toString(size));
         horizontalBox3.add(enemyShipSunk);
         verticalBox.add(horizontalBox3);
+
+        // Create new horizontal box for adding the playerColorBox
+        Box horizontalBox4 = Box.createHorizontalBox();
+        horizontalBox4.add(new JLabel("                            " +                        // Spacing for layout
+                                      "                        Ship Color: "));
+        horizontalBox4.add(playerColorBox);
+        JLabel blankLabel = new JLabel("                            " +                       // Spacing for layour
+                                       "                            ");
+        horizontalBox4.add(blankLabel);
+        verticalBox.add(horizontalBox4);
 
         next.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
