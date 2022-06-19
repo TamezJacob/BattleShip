@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.awt.Color;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
@@ -17,6 +18,7 @@ public class PlayerData {
 
     PlayerData( PlayerScreen player){
         this.player = player;
+        playerShipColor = new ShipColor();
     }
 
     /*All the adding and deleting data methods */
@@ -296,11 +298,11 @@ public class PlayerData {
 
 
     // Setter and getters for the player's ShipColor object
-    public void setShipColor(String shipColor) {
+    public void setShipColor(Color shipColor) {
         this.playerShipColor.setShipColor(shipColor);
     }
 
-    public String getShipColor() {
+    public Color getShipColor() {
         return this.playerShipColor.getShipColor();
     }
 
@@ -322,5 +324,4 @@ public class PlayerData {
             System.out.println();
         }
     }
-
 }

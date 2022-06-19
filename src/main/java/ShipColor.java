@@ -1,21 +1,45 @@
+import java.awt.Color;
+
 public class ShipColor {
 
-    String currentColor;
+    private Color shipColor;
 
     ShipColor() {
-        this.currentColor = "Cyan";
+        this.shipColor = Color.cyan;
     }
 
-    ShipColor(String shipColor) {
-        this.currentColor = shipColor;
+    ShipColor(Color shipColor) {
+        this.shipColor = shipColor;
     }
 
-    void setShipColor(String shipColor) {
-        this.currentColor = shipColor;
+    Color getShipColor() {
+        return shipColor;
     }
 
-    String getShipColor() {
-        return this.currentColor;
+    void setShipColor(Color shipColor) {
+        this.shipColor = shipColor;
+    }
+
+    void setShipColorString(String colorString){
+        switch (colorString) {
+            case "Cyan":
+                setShipColor(Color.cyan);
+                break;
+            case "Red":
+                setShipColor(Color.red);
+                break;
+            case "Blue":
+                setShipColor(Color.blue);
+                break;
+            case "Yellow":
+                setShipColor(Color.yellow);
+                break;
+            case "Green":
+                setShipColor(Color.green);
+                break;
+            default:
+                break;
+        }
     }
 
 }

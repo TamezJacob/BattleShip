@@ -38,6 +38,11 @@ public class PlayerScreen extends JFrame {
 
                     if (e.getSource() == playerColorBox) {
                         System.out.println(playerColorBox.getSelectedItem());
+                        if(name.equals("Player1")){
+                            // battleShip.getPlayer1Data().setShipColorString(playerColorBox.getSelectedItem().toString());
+                        }else{
+
+                        }
                     }
 
                 }
