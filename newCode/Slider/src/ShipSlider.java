@@ -16,12 +16,11 @@ public class ShipSlider implements ChangeListener{
         label = new JLabel();
         button = new JButton();
 
-        slider = new JSlider(JSlider.HORIZONTAL, 1, 10, 5);  
+        slider = new JSlider(JSlider.HORIZONTAL, 1, 10, 3);  
         slider.setMinorTickSpacing(1);  
         slider.setMajorTickSpacing(2);  
         slider.setPaintTicks(true);  
         slider.setPaintLabels(true);
-
         
         label.setText(slider.getValue() + " Units Long");
 
@@ -46,12 +45,11 @@ public class ShipSlider implements ChangeListener{
     @Override
     public void stateChanged(ChangeEvent e){
         label.setText(slider.getValue() + " Units Long");
-
+        setValue(slider.getValue());
     }
 
     private void setValue(int x){
         this.value = x;
-        System.out.println(x);
     }
 
     public int getValue(){
