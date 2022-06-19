@@ -20,7 +20,7 @@ public class ShipColor {
         this.shipColor = shipColor;
     }
 
-    void setShipColorString(String colorString){
+    void setShipColor(String colorString){
         switch (colorString) {
             case "Cyan":
                 setShipColor(Color.cyan);

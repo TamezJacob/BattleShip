@@ -302,6 +302,10 @@ public class PlayerData {
         this.playerShipColor.setShipColor(shipColor);
     }
 
+    public void setShipColor(String shipColor) {
+        this.playerShipColor.setShipColor(shipColor);
+    }
+
     public Color getShipColor() {
         return this.playerShipColor.getShipColor();
     }
