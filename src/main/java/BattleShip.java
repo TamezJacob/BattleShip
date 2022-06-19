@@ -15,6 +15,8 @@ public class BattleShip implements GameState {
     private PlayerData player2Data;
     private PlayerScreen player1 ;
     private PlayerScreen player2;
+    private ShipColor player1ShipColor;
+    private ShipColor player2ShipColor;
 
     private BattleShip() {
         player1 = new PlayerScreen("Player1", true,this);
