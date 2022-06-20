@@ -1,0 +1,1 @@
+Reviewed code with all five group members on Sunday and went over needed changes and the best approach moving forward, We decided to create a new GUI and attach our customization features to it.
