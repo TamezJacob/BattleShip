@@ -57,11 +57,32 @@ public class PlayerScreen extends JFrame {
         horizontalBox0.add(new JLabel("Status for: "+name));
         verticalBox.add(horizontalBox0, BorderLayout.WEST);
 
+
+        //adding changes for a change color feature
+        Box horizontalBox4 = Box.createHorizontalBox();
+        String[] colors = {"Blue","Red","Green","Yellow"};
+        JComboBox colorList = new JComboBox(colors);
+        //colorList.setSelectedIndex(4);
+        //colorList.addActionListener((ActionListener) this);
+        horizontalBox4.add(colorList);
+        verticalBox.add(horizontalBox4, BorderLayout.NORTH);
+
+
+
+
+        JPanel panel = new JPanel();
+
         Box horizontalBox1 = Box.createHorizontalBox();
         horizontalBox1.add(new JLabel("Own ships: "));
         shipBeginning = new JLabel(""+Integer.toString(size));
         horizontalBox1.add(shipBeginning);
         verticalBox.add(horizontalBox1, BorderLayout.SOUTH);
+
+
+
+
+
+
 
         Box horizontalBox2 = Box.createHorizontalBox();
         horizontalBox2.add(new JLabel("Own ships sunk: "));
