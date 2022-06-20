@@ -1,0 +1,1 @@
+My team and I went over the tasks we have done during sprint 1 and talked about what we will demo and do in Sprint 2.
