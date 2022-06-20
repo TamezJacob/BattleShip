@@ -103,11 +103,14 @@ public class SelfGrid extends BattleGrid {
 
 
         int[][] temp=null;
+        PlayerData tempPlayer;
         if(name.equals("Player1")){
             temp = battleShip.getPlayer1Data().getSelfData();
+            tempPlayer = battleShip.getPlayer1Data();
         }
-        else if(name.equals("Player2")){
+        else /*if(name.equals("Player2"))*/{
             temp = battleShip.getPlayer2Data().getSelfData();
+            tempPlayer = battleShip.getPlayer2Data();
         }
 
         for (int i = 0; i < 11; i++) {
@@ -119,7 +122,7 @@ public class SelfGrid extends BattleGrid {
 
                     Point p = new Point(x,y);
                     getJpanel(p);
-                    thePanel.setBackground(Color.CYAN);
+                    thePanel.setBackground(tempPlayer.getShipColor());
                 }
                if(temp[i][j]==0){
                    int x = numberToPanel(i);
