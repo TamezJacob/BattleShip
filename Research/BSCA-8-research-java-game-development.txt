@@ -1,0 +1,36 @@
+For feature/BSCA-8-research-java-game-development
+
+This research ended up being more for java layouts and different GUI aspects
+
+
+Researched java layouts and layout classes including JComboBox which I implemented in the project.
+
+public class JComboBox<E>
+extends JComponent
+implements ItemSelectable, ListDataListener, ActionListener, Accessible
+A component that combines a button or editable field and a drop-down list. The user can select a value from the drop-down list, which appears at the user's request. If you make the combo box editable, then the combo box includes an editable field into which the user can type a value.
+
+
+Researched JColorChooser for use in changing the color of the game board
+Use the JColorChooser class to enable users to choose from a palette of colors. A color chooser is a component that you can place anywhere within your program GUI. The JColorChooser API also makes it easy to bring up a dialog (modal or not) that contains a color chooser.
+
+
+Researched between JPanel and JFrame because I thought about refactoring our existing code from JFrame to JPanel
+
+Basically, a JFrame represents a framed window and a JPanel represents some area in which controls (e.g., buttons, checkboxes, and textfields) and visuals (e.g., figures, pictures, and even text) can appear. Windows can contain/display multiple panels, although in the simplest GUIs, we will associate just one panel with a window.
+
+
+Sources:  
+
+https://www.cs.cmu.edu/~pattis/15-1XX/15-200/lectures/view/lecture.html#:~:text=Basically%2C%20a%20JFrame%20represents%20a,and%20even%20text)%20can%20appear.
+
+https://docs.oracle.com/javase/7/docs/api/javax/swing/JComboBox.html
+
+https://docs.oracle.com/javase/tutorial/uiswing/components/colorchooser.html#:~:text=Use%20the%20JColorChooser%20class%20to,that%20contains%20a%20color%20chooser.
+
+
+
+
+
+
+
