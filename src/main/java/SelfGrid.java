@@ -48,7 +48,7 @@ public class SelfGrid extends BattleGrid {
         JPanel firstCell = new JPanel();
         firstCell.setBorder(BorderFactory.createLineBorder(Color.blue, 2));
         firstCell.setPreferredSize(new Dimension(20, 20)); // for demo purposes only
-        firstCell.setBackground(Color.black);
+        firstCell.setBackground(Color.white);
 
         firstCell.addMouseListener(new MouseAdapter() {
             @Override
@@ -103,11 +103,14 @@ public class SelfGrid extends BattleGrid {
 
 
         int[][] temp=null;
+        PlayerData tempPlayer;
         if(name.equals("Player1")){
             temp = battleShip.getPlayer1Data().getSelfData();
+            tempPlayer = battleShip.getPlayer1Data();
         }
-        else if(name.equals("Player2")){
+        else /*if(name.equals("Player2"))*/{
             temp = battleShip.getPlayer2Data().getSelfData();
+            tempPlayer = battleShip.getPlayer2Data();
         }
 
         for (int i = 0; i < 11; i++) {
@@ -119,7 +122,7 @@ public class SelfGrid extends BattleGrid {
 
                     Point p = new Point(x,y);
                     getJpanel(p);
-                    thePanel.setBackground(Color.CYAN);
+                    thePanel.setBackground(tempPlayer.getShipColor());
                 }
                if(temp[i][j]==0){
                    int x = numberToPanel(i);
@@ -129,7 +132,7 @@ public class SelfGrid extends BattleGrid {
                    Point p = new Point(Math.abs(x),Math.abs(y));
                    getJpanel(p);
 
-                   thePanel.setBackground(Color.BLACK);
+                   thePanel.setBackground(Color.WHITE);
 
                 }
             }
