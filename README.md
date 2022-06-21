@@ -1,6 +1,14 @@
 # Battle Space Ship
  <!-- If you have the project hosted somewhere, include the link here. -->
 
+## Next Steps for Sprint 2
+
+- Curtis  
+    
+	Bugfix for the implementation of changing ship color accross every game state.  
+	Update documentation for implementing other similar features and discuss witht team.  
+	Discuss features with the team that will be implemented from the main menu's settings.  
+    Create and implement other game menu features or assist other team members with implementing their features.  
 
 ## Description
 - Who you’re working with (you and your team members)?
