@@ -26,6 +26,11 @@
 
   
 - Jacob  
+
+	- [BSCA-19](https://cs3398su22gorns.atlassian.net/browse/BSCA-19) Ran tests on the ship slider to ensure input can be accesable by main.
+	- [BSCA-16](https://cs3398su22gorns.atlassian.net/browse/BSCA-16) Researched GUI for my slider and overall understanding of the code.
+	- [BSCA-6](https://cs3398su22gorns.atlassian.net/browse/BSCA-6) Made a slider for ship size
+	- [BSCA-4](https://cs3398su22gorns.atlassian.net/browse/BSCA-4) Created UML Diagram
 	
 	  
 ## Next Steps for Sprint 2
