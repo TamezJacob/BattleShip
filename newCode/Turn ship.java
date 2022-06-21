@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
+
 //turn ship vertically towards north
 public void addVerticalShip(Coordinate a, Coordinate b, Coordinate c)
     {
@@ -27,3 +28,4 @@ public void addVerticalShip(Coordinate a, Coordinate b, Coordinate c)
         fleet.add(new Ship(aNew, bNew, cNew));
         setSelfData(aNew, bNew, cNew);
     }
+    
