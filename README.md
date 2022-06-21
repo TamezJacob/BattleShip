@@ -5,13 +5,14 @@
 
 - Curtis  
 
-	[BSCA-23](https://cs3398su22gorns.atlassian.net/browse/BSCA-23) Tested the imported code for the base game and familiarized myself with classes and functions for implementing features.  
-	[BSCA-14](https://cs3398su22gorns.atlassian.net/browse/BSCA-14) Performed research on general GUI implementation and performed basic tests alongside provided video.  
-	[BSCA-3](https://cs3398su22gorns.atlassian.net/browse/BSCA-3) Implemented a drop-down button in the game's GUI for changing ship color and setup the feature for implementation either at the main menu or while the game is running.  
-	[BSCA-27](https://cs3398su22gorns.atlassian.net/browse/BSCA-27) Implemented the feature to change the color of the player's ship while the game is running.  
+	- [BSCA-23](https://cs3398su22gorns.atlassian.net/browse/BSCA-23) Tested the imported code for the base game and familiarized myself with classes and functions for implementing features.  
+	- [BSCA-14](https://cs3398su22gorns.atlassian.net/browse/BSCA-14) Performed research on general GUI implementation and performed basic tests alongside provided video.  
+	- [BSCA-3](https://cs3398su22gorns.atlassian.net/browse/BSCA-3) Implemented a drop-down button in the game's GUI for changing ship color and setup the feature for implementation either at the main menu or while the game is running.  
+	- [BSCA-27](https://cs3398su22gorns.atlassian.net/browse/BSCA-27) Implemented the feature to change the color of the player's ship while the game is running.  
 	
 	
-- Alex  	
+- Alex
+
 	- [BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author
 	- [BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks
 	- [BSCA-17](https://cs3398su22gorns.atlassian.net/browse/BSCA-17) Creating main menu GUI
@@ -29,14 +30,17 @@
 	  
 ## Next Steps for Sprint 2
 
-- Curtis  
-    
-	Bugfix for the implementation of changing ship color accross every game state.  
-	Update documentation for implementing other similar features and discuss witht team.  
-	Discuss features with the team that will be implemented from the main menu's settings.  
-    Create and implement other game menu features or assist other team members with implementing their features.  
+- Curtis   
+	- Bugfix for the implementation of changing ship color accross every game state.  
+	- Update documentation for implementing other similar features and discuss witht team.  
+	- Discuss features with the team that will be implemented from the main menu's settings.  
+    - Create and implement other game menu features or assist other team members with implementing their features.  
 	
-- Alex  
+- Alex
+	- Combining the Main Menu code with author's code
+	- Connecting the play button with the actual board/game
+	- Adding a pre-game screen that follows after the play button
+	- Meeting with team to pull everything together/discuss demo
 
 - Adrian  
 
