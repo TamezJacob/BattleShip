@@ -12,6 +12,11 @@
 	
 	
 - Alex  	
+	[BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author
+	[BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks
+	[BSCA-17](https://cs3398su22gorns.atlassian.net/browse/BSCA-17) Creating main menu GUI
+	[BSCA-18](https://cs3398su22gorns.atlassian.net/browse/BSCA-18) Adding instructions to the menu
+	[BSCA-24](https://cs3398su22gorns.atlassian.net/browse/BSCA-24) Meeting with team to go over changes
 	
 	
 - Adrian  
