@@ -1,14 +1,52 @@
 # Battle Space Ship
  <!-- If you have the project hosted somewhere, include the link here. -->
 
-## Next Steps for Sprint 2
+## Sprint 1  
 
 - Curtis  
-    
-	Bugfix for the implementation of changing ship color accross every game state.  
-	Update documentation for implementing other similar features and discuss witht team.  
-	Discuss features with the team that will be implemented from the main menu's settings.  
-    Create and implement other game menu features or assist other team members with implementing their features.  
+
+	- [BSCA-23](https://cs3398su22gorns.atlassian.net/browse/BSCA-23) Tested the imported code for the base game and familiarized myself with classes and functions for implementing features.  
+	- [BSCA-14](https://cs3398su22gorns.atlassian.net/browse/BSCA-14) Performed research on general GUI implementation and performed basic tests alongside provided video.  
+	- [BSCA-3](https://cs3398su22gorns.atlassian.net/browse/BSCA-3) Implemented a drop-down button in the game's GUI for changing ship color and setup the feature for implementation either at the main menu or while the game is running.  
+	- [BSCA-27](https://cs3398su22gorns.atlassian.net/browse/BSCA-27) Implemented the feature to change the color of the player's ship while the game is running.  
+	
+	
+- Alex
+
+	- [BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author
+	- [BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks
+	- [BSCA-17](https://cs3398su22gorns.atlassian.net/browse/BSCA-17) Creating main menu GUI
+	- [BSCA-18](https://cs3398su22gorns.atlassian.net/browse/BSCA-18) Adding instructions to the menu
+	- [BSCA-24](https://cs3398su22gorns.atlassian.net/browse/BSCA-24) Meeting with team to go over changes
+	
+	
+- Adrian  
+  
+- Bryce  
+
+  
+- Jacob  
+	
+	  
+## Next Steps for Sprint 2
+
+- Curtis   
+	- Bugfix for the implementation of changing ship color accross every game state.  
+	- Update documentation for implementing other similar features and discuss witht team.  
+	- Discuss features with the team that will be implemented from the main menu's settings.  
+    - Create and implement other game menu features or assist other team members with implementing their features.  
+	
+- Alex
+	- Combining the Main Menu code with author's code
+	- Connecting the play button with the actual board/game
+	- Adding a pre-game screen that follows after the play button
+	- Meeting with team to pull everything together/discuss demo
+
+- Adrian  
+
+- Bryce  
+
+- Jacob  
 
 ## Description
 - Who you’re working with (you and your team members)?

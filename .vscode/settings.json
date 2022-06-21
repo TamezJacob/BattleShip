@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "newCode/Slider/src",
+        "src/main/java"
+    ]
+}

@@ -58,18 +58,7 @@ public class PlayerScreen extends JFrame {
         verticalBox.add(horizontalBox0, BorderLayout.WEST);
 
 
-        //adding changes for a change color feature
-        Box horizontalBox4 = Box.createHorizontalBox();
-        String[] colors = {"Blue","Red","Green","Yellow"};
-        JComboBox colorList = new JComboBox(colors);
-        //colorList.setSelectedIndex(4);
-        //colorList.addActionListener((ActionListener) this);
-        horizontalBox4.add(colorList);
-        verticalBox.add(horizontalBox4, BorderLayout.NORTH);
-
-
-
-
+        
         JPanel panel = new JPanel();
 
         Box horizontalBox1 = Box.createHorizontalBox();
