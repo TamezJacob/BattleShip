@@ -21,6 +21,11 @@
 	
 	
 - Adrian  
+
+	- [BSCA-5](https://cs3398su22gorns.atlassian.net/browse/BSCA-5) Rotating the battle ship before game starts
+	- [BSCA-9](https://cs3398su22gorns.atlassian.net/browse/BSCA-9) Researching the JAVA GUI from the code
+	- [BSCA-20](https://cs3398su22gorns.atlassian.net/browse/BSCA-20) Resize Board to 10, 15, 20 tiles
+	- [BSCA-25](https://cs3398su22gorns.atlassian.net/browse/BSCA-25) Adding size chart to the main menu
   
 - Bryce  
 
@@ -48,6 +53,9 @@
 	- Meeting with team to pull everything together/discuss demo
 
 - Adrian  
+	- Bug fix for rotations so that it can rotate all ways.
+	- Connect the main menu to the board size selecter to be able to select sie before game starts
+	- Team meeting to discuss merges and make sure all code runs smoothly
 
 - Bryce  
 
