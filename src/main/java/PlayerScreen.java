@@ -95,6 +95,19 @@ public class PlayerScreen extends JFrame {
         horizontalBox4.add(blankLabel);
         verticalBox.add(horizontalBox4);
 
+        Box horizontalBox5 = Box.createHorizontalBox();
+        String[] colors = {"Blue","Red","Green","Yellow"};
+        JComboBox colorList = new JComboBox(colors);
+        horizontalBox5.add(new JLabel("                            " +
+                "                        Board Color: "));
+        horizontalBox5.add(colorList);
+        JLabel boardColorLabelBlank = new JLabel("                            " +
+                "                            ");
+        horizontalBox5.add(boardColorLabelBlank);
+        verticalBox.add(horizontalBox5);
+
+
+
         next.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
