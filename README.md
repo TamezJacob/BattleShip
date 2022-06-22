@@ -56,6 +56,7 @@
 	- Bug fix for rotations so that it can rotate all ways.
 	- Connect the main menu to the board size selecter to be able to select sie before game starts
 	- Team meeting to discuss merges and make sure all code runs smoothly
+	- Customize Boards select GUI to look similar to main menu GUI
 
 - Bryce  
 
