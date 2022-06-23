@@ -29,10 +29,10 @@
 
 - Bryce  
 
-- [BSCA-2](https://cs3398su22gorns.atlassian.net/browse/BSCA-2) changing the color of the board
-- [BSCA-8](https://cs3398su22gorns.atlassian.net/browse/BSCA-8) Java GUI research
-- [BSCA-22](https://cs3398su22gorns.atlassian.net/browse/BSCA-22) Reorganized project file structure
-- [BSCA-26](https://cs3398su22gorns.atlassian.net/browse/BSCA-26) Code review with Gorns Team
+	- [BSCA-2](https://cs3398su22gorns.atlassian.net/browse/BSCA-2) changing the color of the board
+	- [BSCA-8](https://cs3398su22gorns.atlassian.net/browse/BSCA-8) Java GUI research
+	- [BSCA-22](https://cs3398su22gorns.atlassian.net/browse/BSCA-22) Reorganized project file structure
+	- [BSCA-26](https://cs3398su22gorns.atlassian.net/browse/BSCA-26) Code review with Gorns Team
 
 
 - Jacob  
@@ -64,10 +64,10 @@
 	- Customize Boards select GUI to look similar to main menu GUI.
 
 - Bryce
-- Add functionality to already implemented JButtons that allow for more customization
- - Refactor code so its more loosely coupled
- - Code review with Gorns
- - Help teammates finish any remaining tasks
+	- Add functionality to already implemented JButtons that allow for more customization
+ 	- Refactor code so its more loosely coupled
+ 	- Code review with Gorns
+ 	- Help teammates finish any remaining tasks
 
 
 - Jacob  
