@@ -13,19 +13,19 @@
 	
 - Alex
 
-	- [BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author
-	- [BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks
-	- [BSCA-17](https://cs3398su22gorns.atlassian.net/browse/BSCA-17) Creating main menu GUI
-	- [BSCA-18](https://cs3398su22gorns.atlassian.net/browse/BSCA-18) Adding instructions to the menu
-	- [BSCA-24](https://cs3398su22gorns.atlassian.net/browse/BSCA-24) Meeting with team to go over changes
+	- [BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author. This was done to understand the base code we were working on.
+	- [BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks. Most of my tasks were GUI related, so this was to gain some knowledge on how things work.
+	- [BSCA-17](https://cs3398su22gorns.atlassian.net/browse/BSCA-17) Creating main menu GUI.
+	- [BSCA-18](https://cs3398su22gorns.atlassian.net/browse/BSCA-18) Adding instructions to the menu.
+	- [BSCA-24](https://cs3398su22gorns.atlassian.net/browse/BSCA-24) Meeting with team to go over changes. This was to pull our changes together and discuss what to demo.
 	
 	
 - Adrian  
 
-	- [BSCA-5](https://cs3398su22gorns.atlassian.net/browse/BSCA-5) Rotating the battle ship before game starts
-	- [BSCA-9](https://cs3398su22gorns.atlassian.net/browse/BSCA-9) Researching the JAVA GUI from the code
-	- [BSCA-20](https://cs3398su22gorns.atlassian.net/browse/BSCA-20) Resize Board to 10, 15, 20 tiles
-	- [BSCA-25](https://cs3398su22gorns.atlassian.net/browse/BSCA-25) Adding size chart to the main menu
+	- [BSCA-5](https://cs3398su22gorns.atlassian.net/browse/BSCA-5) Rotating the battle ship before game starts.
+	- [BSCA-9](https://cs3398su22gorns.atlassian.net/browse/BSCA-9) Researching the JAVA GUI from the code.
+	- [BSCA-20](https://cs3398su22gorns.atlassian.net/browse/BSCA-20) Resize Board to 10, 15, 20 tiles.
+	- [BSCA-25](https://cs3398su22gorns.atlassian.net/browse/BSCA-25) Adding size chart to the main menu.
   
 - Bryce  
 
@@ -34,8 +34,8 @@
 
 	- [BSCA-19](https://cs3398su22gorns.atlassian.net/browse/BSCA-19) Ran tests on the ship slider to ensure input can be accesable by main.
 	- [BSCA-16](https://cs3398su22gorns.atlassian.net/browse/BSCA-16) Researched GUI for my slider and overall understanding of the code.
-	- [BSCA-6](https://cs3398su22gorns.atlassian.net/browse/BSCA-6) Made a slider for ship size
-	- [BSCA-4](https://cs3398su22gorns.atlassian.net/browse/BSCA-4) Created UML Diagram
+	- [BSCA-6](https://cs3398su22gorns.atlassian.net/browse/BSCA-6) Made a slider for ship size.
+	- [BSCA-4](https://cs3398su22gorns.atlassian.net/browse/BSCA-4) Created UML Diagram.
 	
 	  
 ## Next Steps for Sprint 2
@@ -47,20 +47,24 @@
     - Create and implement other game menu features or assist other team members with implementing their features.  
 	
 - Alex
-	- Combining the Main Menu code with author's code
-	- Connecting the play button with the actual board/game
-	- Adding a pre-game screen that follows after the play button
-	- Meeting with team to pull everything together/discuss demo
+	- Combining the Main Menu code with author's code.
+	- Connecting the play button with the actual board/game.
+	- Adding a pre-game screen that follows after the play button.
+	- Meeting with team to pull everything together/discuss demo.
 
 - Adrian  
 	- Bug fix for rotations so that it can rotate all ways.
-	- Connect the main menu to the board size selecter to be able to select sie before game starts
-	- Team meeting to discuss merges and make sure all code runs smoothly
-	- Customize Boards select GUI to look similar to main menu GUI
+	- Connect the main menu to the board size selecter to be able to select sie before game starts.
+	- Team meeting to discuss merges and make sure all code runs smoothly.
+	- Customize Boards select GUI to look similar to main menu GUI.
 
 - Bryce  
 
 - Jacob  
+	- Connect ship slider to the main menu.
+	- Integrate changes to board size with slider to ensure no collisions.
+	- Make the ship slider theme more similar to main menu theme.
+	- Preform debugging tasks.
 
 ## Description
 - Who you’re working with (you and your team members)?
