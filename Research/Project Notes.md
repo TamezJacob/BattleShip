@@ -38,4 +38,4 @@ See the "setShipColor"  and "getShipColor" for example.
 For example, "thePanel.setBackground(tempPlayer.getShipColor());" became "thePanel.setBackground(tempPlayer.setShipColor();". The tempPlayer object contains all data for the color selections made in the player's GUI menu.  
 5. Create and implement the action listener for your GUI button in [PlayerScreen.java](https://bitbucket.org/cs-3398-su22-gorns/battlespaceship/src/master/src/main/java/PlayerScreen.java). 
 See the "playerColorBox" object's action listener, it can be copied and altered to reflect the setter methods you made earlier for your object, in steps 1 and 3.  
-6. Confirm that the implementation works, as intended.  You will need to click on the board after changing colors in the GUI menu, for the application to occur.
+6. Confirm that the implementation works, as intended.  You will need to click on the board after changing colors in the GUI menu, for the application to occur.  
