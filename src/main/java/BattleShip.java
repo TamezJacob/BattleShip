@@ -29,6 +29,7 @@ public class BattleShip implements GameState {
 
     public static void main(String[] args) {
         BattleShip game = new BattleShip();
+        new MainMenu();
         game.player1Turn();
         game.player2turn();
     }
