@@ -9,35 +9,40 @@
 	- [BSCA-14](https://cs3398su22gorns.atlassian.net/browse/BSCA-14) Performed research on general GUI implementation and performed basic tests alongside provided video.  
 	- [BSCA-3](https://cs3398su22gorns.atlassian.net/browse/BSCA-3) Implemented a drop-down button in the game's GUI for changing ship color and setup the feature for implementation either at the main menu or while the game is running.  
 	- [BSCA-27](https://cs3398su22gorns.atlassian.net/browse/BSCA-27) Implemented the feature to change the color of the player's ship while the game is running.  
-	
-	
+
+
 - Alex
 
-	- [BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author.
-	- [BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks.
+	- [BSCA-21](https://cs3398su22gorns.atlassian.net/browse/BSCA-21) Reviewing base code from the author. This was done to understand the base code we were working on.
+	- [BSCA-13](https://cs3398su22gorns.atlassian.net/browse/BSCA-13) Doing research on Java GUI for my tasks. Most of my tasks were GUI related, so this was to gain some knowledge on how things work.
 	- [BSCA-17](https://cs3398su22gorns.atlassian.net/browse/BSCA-17) Creating main menu GUI.
 	- [BSCA-18](https://cs3398su22gorns.atlassian.net/browse/BSCA-18) Adding instructions to the menu.
-	- [BSCA-24](https://cs3398su22gorns.atlassian.net/browse/BSCA-24) Meeting with team to go over changes.
-	
-	
+	- [BSCA-24](https://cs3398su22gorns.atlassian.net/browse/BSCA-24) Meeting with team to go over changes. This was to pull our changes together and discuss what to demo.
+
+
 - Adrian  
 
 	- [BSCA-5](https://cs3398su22gorns.atlassian.net/browse/BSCA-5) Rotating the battle ship before game starts.
 	- [BSCA-9](https://cs3398su22gorns.atlassian.net/browse/BSCA-9) Researching the JAVA GUI from the code.
 	- [BSCA-20](https://cs3398su22gorns.atlassian.net/browse/BSCA-20) Resize Board to 10, 15, 20 tiles.
 	- [BSCA-25](https://cs3398su22gorns.atlassian.net/browse/BSCA-25) Adding size chart to the main menu.
-  
+
 - Bryce  
 
-  
+	- [BSCA-2](https://cs3398su22gorns.atlassian.net/browse/BSCA-2) changing the color of the board
+	- [BSCA-8](https://cs3398su22gorns.atlassian.net/browse/BSCA-8) Java GUI research
+	- [BSCA-22](https://cs3398su22gorns.atlassian.net/browse/BSCA-22) Reorganized project file structure
+	- [BSCA-26](https://cs3398su22gorns.atlassian.net/browse/BSCA-26) Code review with Gorns Team
+
+
 - Jacob  
 
 	- [BSCA-19](https://cs3398su22gorns.atlassian.net/browse/BSCA-19) Ran tests on the ship slider to ensure input can be accesable by main.
 	- [BSCA-16](https://cs3398su22gorns.atlassian.net/browse/BSCA-16) Researched GUI for my slider and overall understanding of the code.
 	- [BSCA-6](https://cs3398su22gorns.atlassian.net/browse/BSCA-6) Made a slider for ship size.
 	- [BSCA-4](https://cs3398su22gorns.atlassian.net/browse/BSCA-4) Created UML Diagram.
-	
-	  
+
+
 ## Next Steps for Sprint 2
 
 - Curtis   
@@ -45,7 +50,7 @@
 	- Update documentation for implementing other similar features and discuss witht team.  
 	- Discuss features with the team that will be implemented from the main menu's settings.  
     - Create and implement other game menu features or assist other team members with implementing their features.  
-	
+
 - Alex
 	- Combining the Main Menu code with author's code.
 	- Connecting the play button with the actual board/game.
@@ -58,7 +63,12 @@
 	- Team meeting to discuss merges and make sure all code runs smoothly.
 	- Customize Boards select GUI to look similar to main menu GUI.
 
-- Bryce  
+- Bryce
+	- Add functionality to already implemented JButtons that allow for more customization
+ 	- Refactor code so its more loosely coupled
+ 	- Code review with Gorns
+ 	- Help teammates finish any remaining tasks
+
 
 - Jacob  
 	- Connect ship slider to the main menu.
@@ -70,15 +80,15 @@
 - Who you’re working with (you and your team members)?
 
 	Adrian Pena, Bryce Harmon, Curtis Kelso, Jacob Tamez, Alex Hlavka
-	
+
 - What you’re creating?
 
 	A classic battleship game, where two people can play against each other.
-		
+
 - Who you’re doing it for, your audience (may be same as the previous question)?
 
 	Our audience is our professor, our class, and anyone else who may be interested in this game/project.
-	
+
 - Why you’re doing this, the impact or change you hope to make?
 
 	We are doing this because all of our team members seemed interested in creating a game and battleship
@@ -107,7 +117,7 @@ List the ready features here:
 	Description: 	Allow the player to choose the color of their battleships from a provided selection before the start of the game.
 
 	User stories: 	Corresponds to Curtis's user story in which he expresses a desire to play battleship as his favorite color.
-	
+
 - Awesome feature 2
 
 	Name: 			Custom game map
@@ -115,31 +125,27 @@ List the ready features here:
 	Description: 	Allow the player to choose the background map from a provided selection before the start of the game.
 
 	User stories:	 Corresponds to Jacob, Alex, and Curtis's user stories in which they express a desire to play battleship as on a different selection of maps
-	
+
 - Awesome feature 3
-	
+
 	Name:			Different size boards
 
 	Description: 	Allow the player to choose from a selection of different board sizes to play the game on.
 
 	User stories: 	Corresponds to Jacob and Alex's user stories expressing a desire to play on different sized game maps.
-	
+
 - Awesome feature 4
 
 	Name: 			Track missed shots
-	
+
 	Desciption: 	Allow the players the ability to track missed shots.
-	
+
 	User stories: 	Corresponds to Bryce's user story expressing a desire for a feature to track missed shots.
-	
+
 - Awesome feature 5
 
 	Name:			Custom number of ships
-	
+
 	Description:	Allow the players the ability to increase or decrease the number of ships in the game.
-	
+
 	User stories:	Corresponds to Bryce's user story about adding customizable features, such as the ability to change the number of ships.
-	
-
-
-
