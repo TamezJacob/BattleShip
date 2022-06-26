@@ -1,5 +1,8 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.sound.sampled.*;
+import java.util.Scanner;
+import java.io.*;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
@@ -20,7 +23,8 @@ public class BattleShip implements GameState {
     private PlayerScreen player2;
     private MainMenu menu;
     
-    private BattleShip() {
+    private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
         menu = new MainMenu();
         player1 = new PlayerScreen("Player1", false,this);
         player2 = new PlayerScreen("Player2", false,this);
@@ -42,8 +46,9 @@ public class BattleShip implements GameState {
         );
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         BattleShip game = new BattleShip();
+
         game.player1Turn();
         game.player2turn();
     }

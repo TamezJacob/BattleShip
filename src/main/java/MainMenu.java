@@ -4,7 +4,10 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -47,9 +50,10 @@ public class MainMenu extends JFrame implements ActionListener {
 	private JButton next3;
 	private JButton next4;
 	public JButton start;
+	private SoundPlayer mainMenuPlayer;
 
 
-	public MainMenu() {
+	public MainMenu() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 		frame = new JFrame();
 		mainMenu = new JPanel();
 		Play = new JPanel();
@@ -58,6 +62,8 @@ public class MainMenu extends JFrame implements ActionListener {
 		Instructions2 = new JPanel();
 		Instructions3 = new JPanel();
 		Instructions4 = new JPanel();
+		mainMenuPlayer = new SoundPlayer();
+		mainMenuPlayer.playMainMenuMusic();
 
 		
 		Border border = BorderFactory.createLineBorder(Color.green, 3);
@@ -209,6 +215,13 @@ public class MainMenu extends JFrame implements ActionListener {
 		start.setFocusable(false);
 		start.setBorder(new LineBorder(Color.green, 1));
 		start.setFont(new Font("MV Boli", Font.BOLD, 14));
+
+		start.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+				mainMenuPlayer.stopMainMenuMusic();
+                }
+            }
+        );
 
 		mainMenu.add(welcome);
 		mainMenu.add(play);
