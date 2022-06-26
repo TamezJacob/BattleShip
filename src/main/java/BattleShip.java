@@ -27,6 +27,9 @@ public class BattleShip implements GameState {
     
     private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
+        soundPlayer = new SoundPlayer();
+		soundPlayer.playMainMenuMusic();
+
         menu = new MainMenu();
         player1 = new PlayerScreen("Player1", false,this, soundPlayer);
         player2 = new PlayerScreen("Player2", false,this, soundPlayer);
@@ -36,10 +39,6 @@ public class BattleShip implements GameState {
         middleOfTheGame = new MiddleOfTheGame(this, player1,player2);
         endOfTheGame = new EndOFTheGame(this, player1,player2);
         this.state = beginningOfTheGame;
-
-        soundPlayer = new SoundPlayer();
-		soundPlayer.playMainMenuMusic();
- 
         
         menu.start.addActionListener(new ActionListener() {
             @Override
@@ -67,24 +66,28 @@ public class BattleShip implements GameState {
         player1.musicBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(player1.musicBox.isSelected() == true)
+                if(player1.musicBox.isSelected() == true) {
                     soundPlayer.playBattleMusic();
-                else
+                    player2.musicBox.setSelected(true);
+                }else{
                     soundPlayer.stopBattleuMusic();
+                    player2.musicBox.setSelected(false);
                 }
             }
-        );
+        });
 
         player2.musicBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(player2.musicBox.isSelected() == true)
+                if(player2.musicBox.isSelected() == true) {
                     soundPlayer.playBattleMusic();
-                else
+                    player1.musicBox.setSelected(true);
+                }else{
                     soundPlayer.stopBattleuMusic();
-                }
+                    player1.musicBox.setSelected(false);
+                }    
             }
-        );
+        });
     }
 
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {

@@ -32,7 +32,10 @@ public class PlayerScreen extends JFrame {
 
         JButton next = new JButton("next");
 
-        musicBox = new JCheckBox("Music On/Off", true);
+        if(show == false)
+            musicBox = new JCheckBox("Music On/Off", true);
+        else
+        musicBox = new JCheckBox("Music On/Off", this.soundPlayer.battleClip.isActive());
 
         // Define JComboBox for playerColorBox - the box for selecting ship colors
         playerColorBox = new JComboBox(playerColorChoices);
