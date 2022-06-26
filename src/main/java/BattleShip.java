@@ -1,5 +1,8 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.sound.sampled.*;
+import java.util.Scanner;
+import java.io.*;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
@@ -19,17 +22,23 @@ public class BattleShip implements GameState {
     public PlayerScreen player1 ;
     private PlayerScreen player2;
     private MainMenu menu;
+
+    SoundPlayer soundPlayer;
     
-    private BattleShip() {
+    private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
         menu = new MainMenu();
-        player1 = new PlayerScreen("Player1", false,this);
-        player2 = new PlayerScreen("Player2", false,this);
+        player1 = new PlayerScreen("Player1", false,this, soundPlayer);
+        player2 = new PlayerScreen("Player2", false,this, soundPlayer);
         player1Data = new PlayerData(player1);
         player2Data = new PlayerData(player2);
         beginningOfTheGame = new BeginningOfTheGame(this, player1,player2);
         middleOfTheGame = new MiddleOfTheGame(this, player1,player2);
         endOfTheGame = new EndOFTheGame(this, player1,player2);
         this.state = beginningOfTheGame;
+
+        soundPlayer = new SoundPlayer();
+		soundPlayer.playMainMenuMusic();
  
         
         menu.start.addActionListener(new ActionListener() {
@@ -37,13 +46,50 @@ public class BattleShip implements GameState {
             public void actionPerformed(ActionEvent e) {
                 player1.setVisible(true);
                 menu.frame.setVisible(false);
+                soundPlayer.stopMainMenuMusic();
+                soundPlayer.playBattleMusic();
+                }
+            }
+        );
+
+        menu.music.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+                if(soundPlayer.mainMenuClip.isActive())
+                    soundPlayer.stopMainMenuMusic();
+                else
+                    soundPlayer.playMainMenuMusic();
+                }
+            }
+        );
+
+        player1.musicBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(player1.musicBox.isSelected() == true)
+                    soundPlayer.playBattleMusic();
+                else
+                    soundPlayer.stopBattleuMusic();
+                }
+            }
+        );
+
+        player2.musicBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(player2.musicBox.isSelected() == true)
+                    soundPlayer.playBattleMusic();
+                else
+                    soundPlayer.stopBattleuMusic();
                 }
             }
         );
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         BattleShip game = new BattleShip();
+
         game.player1Turn();
         game.player2turn();
     }
@@ -97,4 +143,17 @@ public class BattleShip implements GameState {
     public PlayerScreen getPlayer2() {
         return player2;
     }
+
+    public void playHitSoundEffect() {
+        soundPlayer.playHitSoundEffect();
+    }
+
+    public void playExplosionSoundEffect() {
+        soundPlayer.playExplosionSoundEffect();
+    }
+
+    public void playMissSoundEffect() throws LineUnavailableException, IOException {
+        soundPlayer.playMissSoundEffect();
+    }
+    
 }
