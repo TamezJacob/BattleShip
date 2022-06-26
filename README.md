@@ -152,6 +152,7 @@ List the ready features here:
 
 
 
-	## Music Source: 
+	## Music and Sound EFfect Sources: 
 
-	[Main Menu](https://soundcloud.com/pitchforkemporium/space-battleship-yamato-8-bit-remix-wip?in=jorge-jaimes-guevara/sets/vdg) 
+	[Main Menu Music](https://soundcloud.com/pitchforkemporium/space-battleship-yamato-8-bit-remix-wip?in=jorge-jaimes-guevara/sets/vdg)  
+	[Battle Music](https://soundcloud.com/bsbsoundtracks/8-bit-battle)  

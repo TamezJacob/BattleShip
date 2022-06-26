@@ -22,6 +22,8 @@ public class BattleShip implements GameState {
     public PlayerScreen player1 ;
     private PlayerScreen player2;
     private MainMenu menu;
+
+    private SoundPlayer soundPlayer;
     
     private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -34,6 +36,9 @@ public class BattleShip implements GameState {
         middleOfTheGame = new MiddleOfTheGame(this, player1,player2);
         endOfTheGame = new EndOFTheGame(this, player1,player2);
         this.state = beginningOfTheGame;
+
+        soundPlayer = new SoundPlayer();
+		soundPlayer.playMainMenuMusic();
  
         
         menu.start.addActionListener(new ActionListener() {
@@ -41,6 +46,8 @@ public class BattleShip implements GameState {
             public void actionPerformed(ActionEvent e) {
                 player1.setVisible(true);
                 menu.frame.setVisible(false);
+                soundPlayer.stopMainMenuMusic();
+                soundPlayer.playBattleMusic();
                 }
             }
         );
