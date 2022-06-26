@@ -136,7 +136,12 @@ public class BattleShip implements GameState {
         soundPlayer.playHitSoundEffect();
     }
 
+    public void playExplosionSoundEffect() {
+        soundPlayer.playExplosionSoundEffect();
+    }
+
     public void playMissSoundEffect() throws LineUnavailableException, IOException {
         soundPlayer.playMissSoundEffect();
     }
+    
 }

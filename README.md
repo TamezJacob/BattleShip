@@ -156,3 +156,5 @@ List the ready features here:
 
 	[Main Menu Music](https://soundcloud.com/pitchforkemporium/space-battleship-yamato-8-bit-remix-wip?in=jorge-jaimes-guevara/sets/vdg)  
 	[Battle Music](https://soundcloud.com/bsbsoundtracks/8-bit-battle)  
+	[Game Won Music](https://soundcloud.com/fasanov/8-bit-victory-theme-1)  
+	[Hit/Miss Sound Effects](https://freesound.org/people/LittleRobotSoundFactory/packs/16681//)  

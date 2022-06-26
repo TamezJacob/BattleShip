@@ -86,6 +86,7 @@ public class AttackGrid extends BattleGrid {
                             if (isSunk) {
                                 enemyShipSunkPlayer1++;
                                 battleShip.getPlayer1().enemyShipSunk.setText(Integer.toString(enemyShipSunkPlayer1));
+                                soundPlayer.playExplosionSoundEffect();
                                 JOptionPane.showMessageDialog(panel, "Player's 2 ship was sunk! Congratulations!\nclick OK will transition to player 2 screen");
                                 player.hideScreen();
                                 battleShip.getPlayer2().showScreen();
@@ -96,8 +97,8 @@ public class AttackGrid extends BattleGrid {
                         boolean lost = battleShip.getPlayer2Data().isPlayerLost();
                             if (lost) {
                                 battleShip.setState(battleShip.getEndOfTheGame());
+                                battleShip.soundPlayer.playVictorySoundEffect();
                                 JOptionPane.showMessageDialog(panel, "You(player 1) WON! Congratulations!\nClick OK will Exit the game");
-                                //battleShip.soundPlayer.playVictorySoundEffect();
                                 battleShip.player1Turn();
                             }
 
@@ -124,6 +125,7 @@ public class AttackGrid extends BattleGrid {
                                 if (isSunk) {
                                     enemyShipSunkPlayer2++;
                                     battleShip.getPlayer2().enemyShipSunk.setText(Integer.toString(enemyShipSunkPlayer2));
+                                    soundPlayer.playExplosionSoundEffect();
                                     JOptionPane.showMessageDialog(panel, "Player's 1 ship was sunk! Congratulations!\nclick OK will transition to player 1 screen");
                                     player.hideScreen();
                                     battleShip.getPlayer1().showScreen();
@@ -134,8 +136,8 @@ public class AttackGrid extends BattleGrid {
                                 boolean lost = battleShip.getPlayer1Data().isPlayerLost();
                                 if (lost) {
                                     battleShip.setState(battleShip.getEndOfTheGame());
+                                    battleShip.soundPlayer.playVictorySoundEffect();
                                     JOptionPane.showMessageDialog(panel, "You(player 2) WON! Congratulations!\nClick OK will Exit the game");
-                                    //battleShip.soundPlayer.playVictorySoundEffect();
                                     battleShip.player2turn();
                                 }
                             }

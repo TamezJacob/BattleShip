@@ -5,9 +5,9 @@ import java.io.*;
 public class SoundPlayer {
     
     Scanner scanner;
-    File mainMenuMusicFile, battleMusicFile, missSoundEffectFile, hitSoundEffectFile, victorySoundEffectFile;
-    AudioInputStream mainMenuAudioStream, battleAudioStream, missAudioStream, hitAudioStream, victoryAudioStream;
-    Clip mainMenuClip, battleClip, missClip, hitClip, victoryClip;
+    File mainMenuMusicFile, battleMusicFile, missSoundEffectFile, hitSoundEffectFile, victorySoundEffectFile, explosionSoundEffectFile;
+    AudioInputStream mainMenuAudioStream, battleAudioStream, missAudioStream, hitAudioStream, victoryAudioStream, explosionAudioStream;
+    Clip mainMenuClip, battleClip, missClip, hitClip, victoryClip, explosionClip;
 
     SoundPlayer() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         scanner = new Scanner(System.in);
@@ -32,10 +32,15 @@ public class SoundPlayer {
         hitClip = AudioSystem.getClip();
         hitClip.open(hitAudioStream);
 
-        /*victorySoundEffectFile = new File("Battleship Documents/sound/victory.wav");
+        explosionSoundEffectFile = new File("Battleship Documents/sound/explosion.wav");
+        explosionAudioStream = AudioSystem.getAudioInputStream(explosionSoundEffectFile);
+        explosionClip = AudioSystem.getClip();
+        explosionClip.open(explosionAudioStream);
+
+        victorySoundEffectFile = new File("Battleship Documents/sound/victory.wav");
         victoryAudioStream = AudioSystem.getAudioInputStream(victorySoundEffectFile);
         victoryClip = AudioSystem.getClip();
-        victoryClip.open(victoryAudioStream);*/
+        victoryClip.open(victoryAudioStream);
     }
 
     public void playMainMenuMusic(){
@@ -60,6 +65,10 @@ public class SoundPlayer {
 
     public void playHitSoundEffect() {
         hitClip.start();
+    }
+
+    public void playExplosionSoundEffect() {
+        explosionClip.start();
     }
 
     public void playVictorySoundEffect() {
