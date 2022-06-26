@@ -52,6 +52,18 @@ public class BattleShip implements GameState {
             }
         );
 
+        menu.music.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+                if(soundPlayer.mainMenuClip.isActive())
+                    soundPlayer.stopMainMenuMusic();
+                else
+                    soundPlayer.playMainMenuMusic();
+                }
+            }
+        );
+
         player1.musicBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

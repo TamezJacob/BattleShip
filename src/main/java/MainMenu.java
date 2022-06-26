@@ -50,6 +50,7 @@ public class MainMenu extends JFrame implements ActionListener {
 	private JButton next3;
 	private JButton next4;
 	public JButton start;
+	public JButton music;
 
 
 	public MainMenu() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
@@ -212,9 +213,16 @@ public class MainMenu extends JFrame implements ActionListener {
 		start.setBorder(new LineBorder(Color.green, 1));
 		start.setFont(new Font("MV Boli", Font.BOLD, 14));
 
+		music = new JButton("Menu Music On/Off");
+		music.setVisible(true);
+		music.setFocusable(false);
+		music.setBorder(new LineBorder(Color.green, 1));
+		music.setFont(new Font("MV Boli", Font.BOLD, 14));
+
 		mainMenu.add(welcome);
 		mainMenu.add(play);
 		mainMenu.add(instructions);
+		mainMenu.add(music);
 		mainMenu.setBounds(0, 0, 300, 300);
 	    mainMenu.setBackground(Color.black);
 	    mainMenu.setLayout(new GridLayout(0, 1, 20, 20));
@@ -269,8 +277,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		Instructions4.setBounds(0, 0, 100,500);
 	    Instructions4.setBackground(Color.black);
 	    Instructions4.setLayout(new GridLayout(0, 1, 20, 20));
-	    Instructions4.setVisible(false);
-	    
+	    Instructions4.setVisible(false);	
 		
 		frame.setTitle("Battle Space Ship");
 		frame.getContentPane().setBackground( Color.decode("#000000") );
@@ -279,7 +286,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		frame.getRootPane().setBorder(border);
 		frame.pack();
 		frame.setVisible(true);
-		frame.setSize(300,200);
+		frame.setSize(300,250);
 		frame.add(mainMenu);
 		frame.add(Play);
 		frame.add(Instructions);
