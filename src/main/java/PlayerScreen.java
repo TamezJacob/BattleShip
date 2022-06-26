@@ -17,17 +17,22 @@ public class PlayerScreen extends JFrame {
     JLabel shipBeginning;
     JLabel enemyShipSunk;
     JComboBox playerColorBox;
+    JCheckBox musicBox;
     String[] playerColorChoices = {"Cyan", "Red", "Blue", "Yellow", "Green"};
+    SoundPlayer soundPlayer;
 
-    public PlayerScreen(String name, boolean show,BattleShip battleShip) {
+    public PlayerScreen(String name, boolean show,BattleShip battleShip, SoundPlayer soundPlayer) {
         super(name);
         this.battleShip = battleShip;
         this.setLayout(new BorderLayout());
         this.add(new SelfGrid(name,battleShip), BorderLayout.EAST);
         this.add(new AttackGrid(name,battleShip,this), BorderLayout.WEST);
         this.add(new JLabel(name), BorderLayout.NORTH);
+        this.soundPlayer = soundPlayer;
 
         JButton next = new JButton("next");
+
+        musicBox = new JCheckBox("Music On/Off", true);
 
         // Define JComboBox for playerColorBox - the box for selecting ship colors
         playerColorBox = new JComboBox(playerColorChoices);
@@ -107,6 +112,10 @@ public class PlayerScreen extends JFrame {
                 "                            ");
         horizontalBox5.add(boardColorLabelBlank);
         verticalBox.add(horizontalBox5);
+
+        Box horizontalBox6 = Box.createHorizontalBox();
+        horizontalBox6.add(musicBox);
+        verticalBox.add(horizontalBox6);
 
 
 

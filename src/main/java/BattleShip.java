@@ -23,13 +23,13 @@ public class BattleShip implements GameState {
     private PlayerScreen player2;
     private MainMenu menu;
 
-    private SoundPlayer soundPlayer;
+    SoundPlayer soundPlayer;
     
     private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         menu = new MainMenu();
-        player1 = new PlayerScreen("Player1", false,this);
-        player2 = new PlayerScreen("Player2", false,this);
+        player1 = new PlayerScreen("Player1", false,this, soundPlayer);
+        player2 = new PlayerScreen("Player2", false,this, soundPlayer);
         player1Data = new PlayerData(player1);
         player2Data = new PlayerData(player2);
         beginningOfTheGame = new BeginningOfTheGame(this, player1,player2);
@@ -48,6 +48,28 @@ public class BattleShip implements GameState {
                 menu.frame.setVisible(false);
                 soundPlayer.stopMainMenuMusic();
                 soundPlayer.playBattleMusic();
+                }
+            }
+        );
+
+        player1.musicBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(player1.musicBox.isSelected() == true)
+                    soundPlayer.playBattleMusic();
+                else
+                    soundPlayer.stopBattleuMusic();
+                }
+            }
+        );
+
+        player2.musicBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(player2.musicBox.isSelected() == true)
+                    soundPlayer.playBattleMusic();
+                else
+                    soundPlayer.stopBattleuMusic();
                 }
             }
         );
@@ -108,5 +130,13 @@ public class BattleShip implements GameState {
 
     public PlayerScreen getPlayer2() {
         return player2;
+    }
+
+    public void playHitSoundEffect() {
+        soundPlayer.playHitSoundEffect();
+    }
+
+    public void playMissSoundEffect() throws LineUnavailableException, IOException {
+        soundPlayer.playMissSoundEffect();
     }
 }
