@@ -39,9 +39,11 @@ public class PlayerScreen extends JFrame {
                     if (e.getSource() == playerColorBox) {
                         System.out.println(playerColorBox.getSelectedItem());
                         if(name.equals("Player1")){
-                            battleShip.getPlayer1Data().setShipColor((playerColorBox.getSelectedItem().toString()));                // Only works in beginning game state
+                            battleShip.getPlayer1Data().setShipColor((playerColorBox.getSelectedItem().toString()));
+                            getSelfGrid().draw();
                         }else{
-                            battleShip.getPlayer2Data().setShipColor((playerColorBox.getSelectedItem().toString()));                // Only works in beginning game state
+                            battleShip.getPlayer2Data().setShipColor((playerColorBox.getSelectedItem().toString()));
+                            getSelfGrid().draw();
                         }
                     }
 
