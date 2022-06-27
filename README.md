@@ -149,3 +149,12 @@ List the ready features here:
 	Description:	Allow the players the ability to increase or decrease the number of ships in the game.
 
 	User stories:	Corresponds to Bryce's user story about adding customizable features, such as the ability to change the number of ships.
+
+
+
+	## Music and Sound EFfect Sources: 
+
+	[Main Menu Music](https://soundcloud.com/pitchforkemporium/space-battleship-yamato-8-bit-remix-wip?in=jorge-jaimes-guevara/sets/vdg)  
+	[Battle Music](https://soundcloud.com/bsbsoundtracks/8-bit-battle)  
+	[Game Won Music](https://soundcloud.com/fasanov/8-bit-victory-theme-1)  
+	[Hit/Miss Sound Effects](https://freesound.org/people/LittleRobotSoundFactory/packs/16681//)  

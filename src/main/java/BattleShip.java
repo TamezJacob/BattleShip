@@ -1,3 +1,9 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.sound.sampled.*;
+import java.util.Scanner;
+import java.io.*;
+
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
  * @author Minh Phan minh.phan@sjsu.edu
@@ -13,26 +19,85 @@ public class BattleShip implements GameState {
 
     private PlayerData player1Data;
     private PlayerData player2Data;
-    private PlayerScreen player1 ;
+    public PlayerScreen player1 ;
     private PlayerScreen player2;
+    private MainMenu menu;
 
-    private BattleShip() {
-        player1 = new PlayerScreen("Player1", true,this);
-        player2 = new PlayerScreen("Player2", false,this);
+    SoundPlayer soundPlayer;
+    
+    private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
+        soundPlayer = new SoundPlayer();
+		soundPlayer.playMainMenuMusic();
+
+        menu = new MainMenu();
+        player1 = new PlayerScreen("Player1", false,this, soundPlayer);
+        player2 = new PlayerScreen("Player2", false,this, soundPlayer);
         player1Data = new PlayerData(player1);
         player2Data = new PlayerData(player2);
         beginningOfTheGame = new BeginningOfTheGame(this, player1,player2);
         middleOfTheGame = new MiddleOfTheGame(this, player1,player2);
         endOfTheGame = new EndOFTheGame(this, player1,player2);
-        this.state = beginningOfTheGame; //set the state of the game to be the beginning of the game
+        this.state = beginningOfTheGame;
+        
+        menu.start.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                player1.setVisible(true);
+                menu.frame.setVisible(false);
+                soundPlayer.stopMainMenuMusic();
+                soundPlayer.playBattleMusic();
+                }
+            }
+        );
+
+        menu.music.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+                if(soundPlayer.mainMenuClip.isActive())
+                    soundPlayer.stopMainMenuMusic();
+                else
+                    soundPlayer.playMainMenuMusic();
+                }
+            }
+        );
+
+        player1.musicBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(player1.musicBox.isSelected() == true) {
+                    soundPlayer.playBattleMusic();
+                    player2.musicBox.setSelected(true);
+                }else{
+                    soundPlayer.stopBattleuMusic();
+                    player2.musicBox.setSelected(false);
+                }
+            }
+        });
+
+        player2.musicBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(player2.musicBox.isSelected() == true) {
+                    soundPlayer.playBattleMusic();
+                    player1.musicBox.setSelected(true);
+                }else{
+                    soundPlayer.stopBattleuMusic();
+                    player1.musicBox.setSelected(false);
+                }    
+            }
+        });
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         BattleShip game = new BattleShip();
-        new MainMenu();
+
         game.player1Turn();
         game.player2turn();
     }
+
+
 
     public void player1Turn() {
         state.player1Turn();
@@ -81,4 +146,17 @@ public class BattleShip implements GameState {
     public PlayerScreen getPlayer2() {
         return player2;
     }
+
+    public void playHitSoundEffect() {
+        soundPlayer.playHitSoundEffect();
+    }
+
+    public void playExplosionSoundEffect() {
+        soundPlayer.playExplosionSoundEffect();
+    }
+
+    public void playMissSoundEffect() throws LineUnavailableException, IOException {
+        soundPlayer.playMissSoundEffect();
+    }
+    
 }

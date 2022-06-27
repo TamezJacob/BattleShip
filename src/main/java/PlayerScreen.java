@@ -17,17 +17,25 @@ public class PlayerScreen extends JFrame {
     JLabel shipBeginning;
     JLabel enemyShipSunk;
     JComboBox playerColorBox;
+    JCheckBox musicBox;
     String[] playerColorChoices = {"Cyan", "Red", "Blue", "Yellow", "Green"};
+    SoundPlayer soundPlayer;
 
-    public PlayerScreen(String name, boolean show,BattleShip battleShip) {
+    public PlayerScreen(String name, boolean show,BattleShip battleShip, SoundPlayer soundPlayer) {
         super(name);
         this.battleShip = battleShip;
         this.setLayout(new BorderLayout());
         this.add(new SelfGrid(name,battleShip), BorderLayout.EAST);
         this.add(new AttackGrid(name,battleShip,this), BorderLayout.WEST);
         this.add(new JLabel(name), BorderLayout.NORTH);
+        this.soundPlayer = soundPlayer;
 
         JButton next = new JButton("next");
+
+        if(show == false)
+            musicBox = new JCheckBox("Music On/Off", true);
+        else
+        musicBox = new JCheckBox("Music On/Off", this.soundPlayer.battleClip.isActive());
 
         // Define JComboBox for playerColorBox - the box for selecting ship colors
         playerColorBox = new JComboBox(playerColorChoices);
@@ -39,9 +47,11 @@ public class PlayerScreen extends JFrame {
                     if (e.getSource() == playerColorBox) {
                         System.out.println(playerColorBox.getSelectedItem());
                         if(name.equals("Player1")){
-                            battleShip.getPlayer1Data().setShipColor((playerColorBox.getSelectedItem().toString()));                // Only works in beginning game state
+                            battleShip.getPlayer1Data().setShipColor((playerColorBox.getSelectedItem().toString()));
+                            getSelfGrid().draw();
                         }else{
-                            battleShip.getPlayer2Data().setShipColor((playerColorBox.getSelectedItem().toString()));                // Only works in beginning game state
+                            battleShip.getPlayer2Data().setShipColor((playerColorBox.getSelectedItem().toString()));
+                            getSelfGrid().draw();
                         }
                     }
 
@@ -105,6 +115,10 @@ public class PlayerScreen extends JFrame {
                 "                            ");
         horizontalBox5.add(boardColorLabelBlank);
         verticalBox.add(horizontalBox5);
+
+        Box horizontalBox6 = Box.createHorizontalBox();
+        horizontalBox6.add(musicBox);
+        verticalBox.add(horizontalBox6);
 
 
 

@@ -4,7 +4,10 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,7 +18,7 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 public class MainMenu extends JFrame implements ActionListener {
-    private JFrame frame;
+    public JFrame frame;
 	private JPanel mainMenu;
 	private JPanel Play;
 	private JPanel Instructions;
@@ -23,12 +26,7 @@ public class MainMenu extends JFrame implements ActionListener {
 	private JPanel Instructions2;
 	private JPanel Instructions3;
 	private JPanel Instructions4;
-	private JPanel Stats;
-	private JPanel Settings;
 	private JLabel welcome;
-	private JLabel sprint1;
-	private JLabel sprint2;
-	private JLabel sprint3;
 	private JLabel Instructions1Label;
 	private JLabel Instructions2Label;
 	private JLabel Instructions3Label;
@@ -47,16 +45,15 @@ public class MainMenu extends JFrame implements ActionListener {
 	private JButton instructions3;
 	private JButton instructions4;
 	private JButton instructions5;
-	private JButton stats;
-	private JButton stats1;
-	private JButton settings;
-	private JButton settings1;
 	private JButton next1;
 	private JButton next2;
 	private JButton next3;
 	private JButton next4;
+	public JButton start;
+	public JButton music;
 
-	public MainMenu() {
+
+	public MainMenu() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 		frame = new JFrame();
 		mainMenu = new JPanel();
 		Play = new JPanel();
@@ -65,8 +62,6 @@ public class MainMenu extends JFrame implements ActionListener {
 		Instructions2 = new JPanel();
 		Instructions3 = new JPanel();
 		Instructions4 = new JPanel();
-		Stats = new JPanel();
-		Settings = new JPanel();
 		
 		Border border = BorderFactory.createLineBorder(Color.green, 3);
 		welcome = new JLabel("Welcome to Battle Space Ship!");
@@ -141,24 +136,6 @@ public class MainMenu extends JFrame implements ActionListener {
 		fifthInstr.setForeground(Color.green);
 		fifthInstr.setBackground(Color.black);
 		
-		sprint1 = new JLabel("Feature will be implemented in Sprint 2");
-		sprint1.setOpaque(true);
-		sprint1.setFont(new Font("MV Boli", Font.PLAIN, 14));
-		sprint1.setForeground(Color.green);
-		sprint1.setBackground(Color.black);
-		
-		sprint2 = new JLabel("Feature will be implemented in Sprint 2");
-		sprint2.setOpaque(true);
-		sprint2.setFont(new Font("MV Boli", Font.PLAIN, 14));
-		sprint2.setForeground(Color.green);
-		sprint2.setBackground(Color.black);
-		
-		sprint3 = new JLabel("Feature will be implemented in Sprint 2");
-		sprint3.setOpaque(true);
-		sprint3.setFont(new Font("MV Boli", Font.PLAIN, 14));
-		sprint3.setForeground(Color.green);
-		sprint3.setBackground(Color.black);
-		
 		play = new JButton("Play");
 		play.addActionListener(this);
 		play.setFocusable(false);
@@ -207,30 +184,6 @@ public class MainMenu extends JFrame implements ActionListener {
 		instructions5.setBorder(new LineBorder(Color.green, 1));
 		instructions5.setFont(new Font("MV Boli", Font.BOLD, 14));
 		
-		stats = new JButton("Statistics");
-		stats.addActionListener(this);
-		stats.setFocusable(false);
-		stats.setBorder(new LineBorder(Color.green, 1));
-		stats.setFont(new Font("MV Boli", Font.BOLD, 14));
-	
-		stats1 = new JButton("Return to Main Menu");
-		stats1.addActionListener(this);
-		stats1.setFocusable(false);
-		stats1.setBorder(new LineBorder(Color.green, 1));
-		stats1.setFont(new Font("MV Boli", Font.BOLD, 14));
-		
-		settings = new JButton("Settings");
-		settings.addActionListener(this);
-		settings.setFocusable(false);
-		settings.setBorder(new LineBorder(Color.green, 1));
-		settings.setFont(new Font("MV Boli", Font.BOLD, 14));
-		
-		settings1 = new JButton("Return to Main Menu");
-		settings1.addActionListener(this);
-		settings1.setFocusable(false);
-		settings1.setBorder(new LineBorder(Color.green, 1));
-		settings1.setFont(new Font("MV Boli", Font.BOLD, 14));
-		
 		next1 = new JButton("Next");
 		next1.addActionListener(this);
 		next1.setFocusable(false);
@@ -255,17 +208,26 @@ public class MainMenu extends JFrame implements ActionListener {
 		next4.setBorder(new LineBorder(Color.green, 1));
 		next4.setFont(new Font("MV Boli", Font.BOLD, 14));
 		
-		
+		start = new JButton("Start Game");
+		start.setFocusable(false);
+		start.setBorder(new LineBorder(Color.green, 1));
+		start.setFont(new Font("MV Boli", Font.BOLD, 14));
+
+		music = new JButton("Menu Music On/Off");
+		music.setVisible(true);
+		music.setFocusable(false);
+		music.setBorder(new LineBorder(Color.green, 1));
+		music.setFont(new Font("MV Boli", Font.BOLD, 14));
+
 		mainMenu.add(welcome);
 		mainMenu.add(play);
 		mainMenu.add(instructions);
-		mainMenu.add(stats);
-		mainMenu.add(settings);
+		mainMenu.add(music);
 		mainMenu.setBounds(0, 0, 300, 300);
 	    mainMenu.setBackground(Color.black);
 	    mainMenu.setLayout(new GridLayout(0, 1, 20, 20));
 	    
-	    Play.add(sprint1);
+		Play.add(start);
 	    Play.add(play1);
 		Play.setBounds(0, 0, 300,500);
 	    Play.setBackground(Color.black);
@@ -315,22 +277,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		Instructions4.setBounds(0, 0, 100,500);
 	    Instructions4.setBackground(Color.black);
 	    Instructions4.setLayout(new GridLayout(0, 1, 20, 20));
-	    Instructions4.setVisible(false);
-	    
-	    Stats.add(sprint2);
-	    Stats.add(stats1);
-		Stats.setBounds(0, 0, 300,500);
-	    Stats.setBackground(Color.black);
-	    Stats.setLayout(new GridLayout(0, 1, 20, 20));
-	    Stats.setVisible(false);
-	    
-	    Settings.add(sprint3);
-	    Settings.add(settings1);
-		Settings.setBounds(0, 0, 300,500);
-	    Settings.setBackground(Color.black);
-	    Settings.setLayout(new GridLayout(0,1, 20, 20));
-	    Settings.setVisible(false);
-	    
+	    Instructions4.setVisible(false);	
 		
 		frame.setTitle("Battle Space Ship");
 		frame.getContentPane().setBackground( Color.decode("#000000") );
@@ -339,12 +286,10 @@ public class MainMenu extends JFrame implements ActionListener {
 		frame.getRootPane().setBorder(border);
 		frame.pack();
 		frame.setVisible(true);
-		frame.setSize(300,300);
+		frame.setSize(300,250);
 		frame.add(mainMenu);
 		frame.add(Play);
 		frame.add(Instructions);
-		frame.add(Stats);
-		frame.add(Settings);
 		frame.add(Instructions1);
 		frame.add(Instructions2);
 		frame.add(Instructions3);
@@ -361,37 +306,17 @@ public class MainMenu extends JFrame implements ActionListener {
 		else if(e.getSource()==instructions1) {
 			mainMenu.setVisible(true);
 			Instructions.setVisible(false);
-			frame.setSize(300, 300);
+			frame.setSize(300, 200);
 		}
 		else if(e.getSource()==play) {
 			mainMenu.setVisible(false);
 			Play.setVisible(true);
-			frame.setSize(350,150);
+			frame.setSize(350,300);
 		}
 		else if(e.getSource()==play1) {
 			mainMenu.setVisible(true);
 			Play.setVisible(false);
-			frame.setSize(300, 300);
-		}
-		else if(e.getSource()==stats) {
-			mainMenu.setVisible(false);
-			Play.setVisible(true);
-			frame.setSize(350,150);
-		}
-		else if(e.getSource()==stats1) {
-			mainMenu.setVisible(true);
-			Play.setVisible(false);
-			frame.setSize(300, 300);
-		}
-		else if(e.getSource()==settings) {
-			mainMenu.setVisible(false);
-			Play.setVisible(true);
-			frame.setSize(350,150);
-		}
-		else if(e.getSource()==settings1) {
-			mainMenu.setVisible(true);
-			Play.setVisible(false);
-			frame.setSize(300, 300);
+			frame.setSize(300, 200);
 		}
 		else if(e.getSource()==next1) {
 			Instructions1.setVisible(true);
@@ -401,7 +326,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		else if(e.getSource()==instructions2) {
 			mainMenu.setVisible(true);
 			Instructions1.setVisible(false);
-			frame.setSize(300, 300);
+			frame.setSize(300, 200);
 		}
 		else if(e.getSource()==next2) {
 			Instructions2.setVisible(true);
@@ -411,7 +336,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		else if(e.getSource()==instructions3) {
 			mainMenu.setVisible(true);
 			Instructions2.setVisible(false);
-			frame.setSize(300, 300);
+			frame.setSize(300, 200);
 		}
 		else if(e.getSource()==next3) {
 			Instructions3.setVisible(true);
@@ -421,7 +346,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		else if(e.getSource()==instructions4) {
 			mainMenu.setVisible(true);
 			Instructions3.setVisible(false);
-			frame.setSize(300, 300);
+			frame.setSize(300, 200);
 		}
 		else if(e.getSource()==next4) {
 			Instructions4.setVisible(true);
@@ -431,7 +356,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		else if(e.getSource()==instructions5) {
 			mainMenu.setVisible(true);
 			Instructions4.setVisible(false);
-			frame.setSize(300, 300);
+			frame.setSize(300, 200);
 		}
 	}
 }

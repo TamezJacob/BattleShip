@@ -1,6 +1,9 @@
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
@@ -19,6 +22,7 @@ public class AttackGrid extends BattleGrid {
     private BattleShip battleShip;
     private PlayerScreen player;
     private JPanel thePanel = null;
+    SoundPlayer soundPlayer;
 
 
     public AttackGrid(String name,BattleShip battleShip,PlayerScreen player) {
@@ -26,7 +30,6 @@ public class AttackGrid extends BattleGrid {
         this.name = name;
         this.player = player;
         this.battleShip = battleShip;
-
     }
 
     @Override
@@ -39,7 +42,65 @@ public class AttackGrid extends BattleGrid {
 
         panel.addMouseListener(new MouseAdapter() {
             @Override
+            public void mouseEntered(MouseEvent e) {
+                if(isAttackGridListener) {
+
+                    Point i = panel.getLocation();
+                    double xPos = (i.getX() / 20 + 1);
+                    int x = (int) xPos;
+                    double yPos = (i.getY() / 20 + 1);
+                    int y = (int) yPos;
+
+                    if (name.equals("Player1")) {
+                        draw(x, y);
+                    }
+
+                    if (name.equals("Player2")) {
+                        draw(x, y);
+                    }
+                }
+            }     
+        });
+        
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseExited(MouseEvent e) {
+                if(isAttackGridListener) {
+
+                    Point i = panel.getLocation();
+                    double xPos = (i.getX() / 20 + 1);
+                    int x = (int) xPos;
+                    double yPos = (i.getY() / 20 + 1);
+                    int y = (int) yPos;
+
+                    if (name.equals("Player1")) {
+                        drawBackground(x, y);
+                    }
+
+                    if (name.equals("Player2")) {
+                        drawBackground(x, y);
+                    }
+                }
+            }
+        });
+
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
             public void mouseClicked(MouseEvent e) {
+
+                try {
+                    soundPlayer = new SoundPlayer();
+                } catch (UnsupportedAudioFileException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                } catch (LineUnavailableException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+
                 if(isAttackGridListener) {
 
                     Point i = panel.getLocation();
@@ -58,15 +119,18 @@ public class AttackGrid extends BattleGrid {
                             if (success) {
                                 battleShip.getPlayer1Data().setAttackData(x, y, "success");
                                 draw();
+                                soundPlayer.playHitSoundEffect();
                             } else {
                                 battleShip.getPlayer1Data().setAttackData(x, y, "failure");
                                 draw();
+                                soundPlayer.playMissSoundEffect();
                             }
 
                             boolean isSunk = battleShip.getPlayer2Data().isSunk(hit);
                             if (isSunk) {
                                 enemyShipSunkPlayer1++;
                                 battleShip.getPlayer1().enemyShipSunk.setText(Integer.toString(enemyShipSunkPlayer1));
+                                soundPlayer.playExplosionSoundEffect();
                                 JOptionPane.showMessageDialog(panel, "Player's 2 ship was sunk! Congratulations!\nclick OK will transition to player 2 screen");
                                 player.hideScreen();
                                 battleShip.getPlayer2().showScreen();
@@ -77,6 +141,7 @@ public class AttackGrid extends BattleGrid {
                         boolean lost = battleShip.getPlayer2Data().isPlayerLost();
                             if (lost) {
                                 battleShip.setState(battleShip.getEndOfTheGame());
+                                battleShip.soundPlayer.playVictorySoundEffect();
                                 JOptionPane.showMessageDialog(panel, "You(player 1) WON! Congratulations!\nClick OK will Exit the game");
                                 battleShip.player1Turn();
                             }
@@ -93,15 +158,18 @@ public class AttackGrid extends BattleGrid {
                                     System.out.print("player2 attack");
                                     battleShip.getPlayer2Data().setAttackData(x, y, "success");
                                     draw();
+                                    soundPlayer.playHitSoundEffect();
                                 } else {
                                     battleShip.getPlayer2Data().setAttackData(x, y, "failure");
                                     draw();
+                                    soundPlayer.playMissSoundEffect();
                                 }
 
                                 boolean isSunk = battleShip.getPlayer1Data().isSunk(hit);
                                 if (isSunk) {
                                     enemyShipSunkPlayer2++;
                                     battleShip.getPlayer2().enemyShipSunk.setText(Integer.toString(enemyShipSunkPlayer2));
+                                    soundPlayer.playExplosionSoundEffect();
                                     JOptionPane.showMessageDialog(panel, "Player's 1 ship was sunk! Congratulations!\nclick OK will transition to player 1 screen");
                                     player.hideScreen();
                                     battleShip.getPlayer1().showScreen();
@@ -112,6 +180,7 @@ public class AttackGrid extends BattleGrid {
                                 boolean lost = battleShip.getPlayer1Data().isPlayerLost();
                                 if (lost) {
                                     battleShip.setState(battleShip.getEndOfTheGame());
+                                    battleShip.soundPlayer.playVictorySoundEffect();
                                     JOptionPane.showMessageDialog(panel, "You(player 2) WON! Congratulations!\nClick OK will Exit the game");
                                     battleShip.player2turn();
                                 }
@@ -164,6 +233,33 @@ public class AttackGrid extends BattleGrid {
                 }
             }
         }
+    }
+
+    public void draw(int x, int y) {
+        
+        x = numberToPanel(x);
+        y = numberToPanel(y);
+
+        Point p = new Point(x,y);
+        getJpanel(p);
+
+        try {
+            if(thePanel.getBackground() == Color.black)                                     // NEEDS TO BE CHANGED IF A CUSTOM (AttackGrid) BOARD COLOR IS IMPLEMENTED!
+                thePanel.setBackground(Color.gray);
+        }catch(Exception exception){}
+    }
+
+    public void drawBackground(int x, int y) {
+        x = numberToPanel(x);
+        y = numberToPanel(y);
+
+        Point p = new Point(x,y);
+        getJpanel(p);
+
+        try {
+            if(thePanel.getBackground() == Color.gray)                                       // THESE NEED TO BE MODIFIED IF A CUSTOM (AttackGrid) BOARD 
+                thePanel.setBackground(Color.black);                                         // COLOR GETS IMPLEMENTED!
+        }catch(Exception exception){}
     }
 
     public int numberToPanel(int s){

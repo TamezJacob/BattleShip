@@ -26,10 +26,10 @@ public class ShipColor {
                 setShipColor(Color.cyan);
                 break;
             case "Red":
-                setShipColor(Color.red);
+                setShipColor(new Color(204,0,0));
                 break;
             case "Blue":
-                setShipColor(Color.blue);
+                setShipColor(new Color(51,153,255));
                 break;
             case "Yellow":
                 setShipColor(Color.yellow);
