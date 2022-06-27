@@ -42,6 +42,50 @@ public class AttackGrid extends BattleGrid {
 
         panel.addMouseListener(new MouseAdapter() {
             @Override
+            public void mouseEntered(MouseEvent e) {
+                if(isAttackGridListener) {
+
+                    Point i = panel.getLocation();
+                    double xPos = (i.getX() / 20 + 1);
+                    int x = (int) xPos;
+                    double yPos = (i.getY() / 20 + 1);
+                    int y = (int) yPos;
+
+                    if (name.equals("Player1")) {
+                        draw(x, y);
+                    }
+
+                    if (name.equals("Player2")) {
+                        draw(x, y);
+                    }
+                }
+            }     
+        });
+        
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseExited(MouseEvent e) {
+                if(isAttackGridListener) {
+
+                    Point i = panel.getLocation();
+                    double xPos = (i.getX() / 20 + 1);
+                    int x = (int) xPos;
+                    double yPos = (i.getY() / 20 + 1);
+                    int y = (int) yPos;
+
+                    if (name.equals("Player1")) {
+                        drawBackground(x, y);
+                    }
+
+                    if (name.equals("Player2")) {
+                        drawBackground(x, y);
+                    }
+                }
+            }
+        });
+
+        panel.addMouseListener(new MouseAdapter() {
+            @Override
             public void mouseClicked(MouseEvent e) {
 
                 try {
@@ -189,6 +233,33 @@ public class AttackGrid extends BattleGrid {
                 }
             }
         }
+    }
+
+    public void draw(int x, int y) {
+        
+        x = numberToPanel(x);
+        y = numberToPanel(y);
+
+        Point p = new Point(x,y);
+        getJpanel(p);
+
+        try {
+            if(thePanel.getBackground() == Color.black)                                     // NEEDS TO BE CHANGED IF A CUSTOM (AttackGrid) BOARD COLOR IS IMPLEMENTED!
+                thePanel.setBackground(Color.gray);
+        }catch(Exception exception){}
+    }
+
+    public void drawBackground(int x, int y) {
+        x = numberToPanel(x);
+        y = numberToPanel(y);
+
+        Point p = new Point(x,y);
+        getJpanel(p);
+
+        try {
+            if(thePanel.getBackground() == Color.gray)                                       // THESE NEED TO BE MODIFIED IF A CUSTOM (AttackGrid) BOARD 
+                thePanel.setBackground(Color.black);                                         // COLOR GETS IMPLEMENTED!
+        }catch(Exception exception){}
     }
 
     public int numberToPanel(int s){
