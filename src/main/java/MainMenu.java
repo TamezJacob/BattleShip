@@ -1,24 +1,18 @@
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.IOException;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
-import javax.swing.JComboBox;
+import javax.swing.*;
+import javax.swing.border.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-public class MainMenu extends JFrame implements ActionListener {
+
+public class MainMenu extends JFrame implements ActionListener, ChangeListener {
     public JFrame frame;
 	private JPanel mainMenu;
 	private JPanel Play;
@@ -50,6 +44,13 @@ public class MainMenu extends JFrame implements ActionListener {
 	private JButton next2;
 	private JButton next3;
 	private JButton next4;
+	private JFrame ssFrame;
+	private JSlider ssSlider;
+	private JLabel ssLabel;
+	private JPanel ssPanel;
+	public JButton ssButton;
+	private JButton ssMenuButton;
+	public int ssSize;
 	public JButton start;
 	public JButton music;
 	public JFrame gridSizeSelect;
@@ -231,6 +232,12 @@ public class MainMenu extends JFrame implements ActionListener {
 		mainMenu.setBounds(0, 0, 300, 300);
 	    mainMenu.setBackground(Color.black);
 	    mainMenu.setLayout(new GridLayout(0, 1, 20, 20));
+
+		ssMenuButton = new JButton("Ship Size");
+		ssMenuButton.addActionListener(this);
+		ssMenuButton.setFocusable(false);
+		ssMenuButton.setBorder(new LineBorder(Color.green, 1));
+		ssMenuButton.setFont(new Font("MV Boli", Font.BOLD, 14));
 	    
 		JComboBox combo = new JComboBox <String>();
         combo.addItem("10x10");
@@ -244,6 +251,7 @@ public class MainMenu extends JFrame implements ActionListener {
 		boardSize.setBackground(Color.black);
 
 		Play.add(start);
+		Play.add(ssMenuButton);
 	    Play.add(play1);
 		Play.add(combo);
 		Play.setBounds(0, 0, 300,500);
@@ -295,6 +303,65 @@ public class MainMenu extends JFrame implements ActionListener {
 	    Instructions4.setBackground(Color.black);
 	    Instructions4.setLayout(new GridLayout(0, 1, 20, 20));
 	    Instructions4.setVisible(false);	
+
+        ssFrame = new JFrame();
+        ssLabel = new JLabel();
+        ssButton = new JButton();
+        ssPanel=new JPanel();  
+
+		ssFrame.setBackground(Color.black);
+
+        ssSlider = new JSlider(JSlider.HORIZONTAL, 3, 8, 3);  
+        ssSlider.setMinorTickSpacing(1);  
+        ssSlider.setMajorTickSpacing(2);  
+        ssSlider.setPaintTicks(true);  
+        ssSlider.setPaintLabels(true);
+		ssSlider.setFocusable(false);
+		ssSlider.setBackground(Color.black);
+		ssSlider.setForeground(Color.green);
+		ssSlider.setBorder(new LineBorder(Color.green, 1));
+		ssSlider.setFont(new Font("MV Boli", Font.BOLD, 14));
+        
+        ssLabel.setText(ssSlider.getValue() + " Units Long");
+		ssLabel.setOpaque(true);
+		ssLabel.setBackground(Color.black);
+		ssLabel.setForeground(Color.green);
+		ssLabel.setFont(new Font("MV Boli", Font.PLAIN, 14));
+		ssLabel.setBorder(new LineBorder(Color.green, 1));
+
+        ssSlider.addChangeListener(this);
+        
+        ssButton.setBounds(65, 100, 100, 25);
+        ssFrame.add(ssButton);
+
+        ssButton.addActionListener(e-> setValue(ssSlider.getValue()));
+        ssButton.setText("SET");
+        ssButton.setFocusable(false);
+		ssButton.addActionListener(this);
+		ssButton.setFocusable(false);
+		ssButton.setBorder(new LineBorder(Color.green, 1));
+		ssButton.setFont(new Font("MV Boli", Font.BOLD, 14));
+
+        
+        ssPanel.add(ssSlider);  
+        ssPanel.add(ssLabel);
+		ssPanel.setFocusable(false);
+		ssPanel.setOpaque(true);
+		ssPanel.setBackground(Color.black);
+		ssPanel.setForeground(Color.green);
+		ssPanel.setBorder(new LineBorder(Color.green, 1));
+		ssPanel.setFont(new Font("MV Boli", Font.BOLD, 14));
+        ssFrame.add(ssPanel);
+
+        ssFrame.setSize(240,250);
+		
+        ssFrame.setVisible(false);
+		ssFrame.setFocusable(false);
+		ssFrame.setBackground(Color.black);
+		ssFrame.setForeground(Color.green);
+		ssFrame.setFont(new Font("MV Boli", Font.BOLD, 14));
+        ssFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		
 		frame.setTitle("Battle Space Ship");
 		frame.getContentPane().setBackground( Color.decode("#000000") );
@@ -334,6 +401,23 @@ public class MainMenu extends JFrame implements ActionListener {
 			mainMenu.setVisible(true);
 			Play.setVisible(false);
 			frame.setSize(300, 200);
+		}
+		else if(e.getSource()==ssMenuButton) {
+			ssFrame.setVisible(true);
+			ssPanel.setVisible(true);
+			mainMenu.setVisible(false);
+			Play.setVisible(false);
+
+			// make sure to correct
+			frame.setVisible(false);
+		}
+		else if(e.getSource() == ssButton){
+			ssFrame.setVisible(false);
+			ssPanel.setVisible(false);
+			frame.setVisible(true);
+			Play.setVisible(true);
+			frame.setSize(350,300);
+
 		}
 		else if(e.getSource()==next1) {
 			Instructions1.setVisible(true);
@@ -376,4 +460,19 @@ public class MainMenu extends JFrame implements ActionListener {
 			frame.setSize(300, 200);
 		}
 	}
+
+	
+    @Override
+    public void stateChanged(ChangeEvent e){
+        ssLabel.setText(ssSlider.getValue() + " Units Long");
+        setValue(ssSlider.getValue());
+    }
+
+    private void setValue(int x){
+        this.ssSize = x;
+    }
+
+    public int getValue(){
+        return this.ssSize;
+    }
 }

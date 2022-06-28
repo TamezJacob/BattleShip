@@ -77,7 +77,7 @@ public class SelfGrid extends BattleGrid {
                     thirdNextPoint = new Point((int)(firstPoint.getX()+40),(int)(firstPoint.getY()));
                     Coordinate a = new Coordinate(x,y);
                     Coordinate b = new Coordinate(x2,y2);
-                    Coordinate c = new Coordinate(x3,y3);
+                    Coordinate c = new Coordinate(x3,y3);;
 
                     getComp2(secondNextPoint);
                     getComp3(thirdNextPoint);
