@@ -53,6 +53,10 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 	public int ssSize;
 	public JButton start;
 	public JButton music;
+	public JFrame gridSizeSelect;
+	public  JComboBox <String> combo;
+	public JLabel boardSize;
+	BattleShip game;
 
 
 	public MainMenu() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
@@ -235,9 +239,21 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		ssMenuButton.setBorder(new LineBorder(Color.green, 1));
 		ssMenuButton.setFont(new Font("MV Boli", Font.BOLD, 14));
 	    
+		JComboBox combo = new JComboBox <String>();
+        combo.addItem("10x10");
+        combo.addItem("15x15");
+        combo.addItem("20x20");
+
+		boardSize = new JLabel("Please select size:");
+		boardSize.setOpaque(true);
+		boardSize.setFont(new Font("MV Boli", Font.PLAIN, 14));
+		boardSize.setForeground(Color.green);
+		boardSize.setBackground(Color.black);
+
 		Play.add(start);
 		Play.add(ssMenuButton);
 	    Play.add(play1);
+		Play.add(combo);
 		Play.setBounds(0, 0, 300,500);
 	    Play.setBackground(Color.black);
 	    Play.setLayout(new GridLayout(0, 1, 20, 20));
