@@ -32,6 +32,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 	private JLabel thirdInstr;
 	private JLabel fourthInstr;
 	private JLabel fifthInstr;
+	private JLabel readyForB; 
 	private JButton play;
 	private JButton play1;
 	private JButton instructions;
@@ -250,13 +251,23 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		boardSize.setForeground(Color.green);
 		boardSize.setBackground(Color.black);
 
+		
+		Border border2 = BorderFactory.createLineBorder(Color.green, 3); 
+		readyForB = new JLabel("Ready for Battle!!!"); 
+		readyForB.setOpaque(true); 
+		readyForB.setBackground(Color.black); 
+		readyForB.setForeground(Color.green); 
+		readyForB.setFont(new Font("MV Boli", Font.PLAIN, 24)); 
+		readyForB.setBorder(new LineBorder(Color.green, 1)); 
+
 		Play.add(start);
 		Play.add(ssMenuButton);
 	    Play.add(play1);
 		Play.add(combo);
+		Play.add(readyForB);
 		Play.setBounds(0, 0, 300,500);
 	    Play.setBackground(Color.black);
-	    Play.setLayout(new GridLayout(0, 1, 20, 20));
+	    Play.setLayout(new GridLayout(0, 1, 20, 10));
 	    Play.setVisible(false);
 	    
 	    
