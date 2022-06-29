@@ -1,0 +1,3 @@
+The team met on zoom to discuss our progress and what we'd be able to demo. I explained my roadblock and advice given by Dr. Lehr. We discussed the features that wouldn't make it to the demo such as my ship slider that would change the sizes of the ships. 
+
+Also discussed what we could do going forward as the original source code is hardcoded in multiple aspects.
