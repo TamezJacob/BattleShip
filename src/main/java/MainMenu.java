@@ -47,11 +47,14 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 	private JButton next4;
 	private JFrame ssFrame;
 	public JSlider ssSlider;
+	public JLabel ssNumLabel;
 	public JLabel ssLabel;
+	public JSlider ssNum;
 	private JPanel ssPanel;
 	public JButton ssButton;
 	private JButton ssMenuButton;
 	public int ssSize;
+	public int ssShipNum;
 	public JButton start;
 	public JButton music;
 	public JFrame gridSizeSelect;
@@ -234,7 +237,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 	    mainMenu.setBackground(Color.black);
 	    mainMenu.setLayout(new GridLayout(0, 1, 20, 20));
 
-		ssMenuButton = new JButton("Ship Size");
+		ssMenuButton = new JButton("Ship Settings");
 		ssMenuButton.addActionListener(this);
 		ssMenuButton.setFocusable(false);
 		ssMenuButton.setBorder(new LineBorder(Color.green, 1));
@@ -317,6 +320,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 
         ssFrame = new JFrame();
         ssLabel = new JLabel();
+		ssNumLabel = new JLabel();
         ssButton = new JButton();
         ssPanel=new JPanel();  
 
@@ -340,11 +344,27 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		ssLabel.setFont(new Font("MV Boli", Font.PLAIN, 14));
 		ssLabel.setBorder(new LineBorder(Color.green, 1));
 
+		ssNum = new JSlider(JSlider.HORIZONTAL, 1, 5, 5);  
+        ssNum.setMinorTickSpacing(1);  
+        ssNum.setMajorTickSpacing(2);  
+        ssNum.setPaintTicks(true);  
+        ssNum.setPaintLabels(true);
+		ssNum.setFocusable(false);
+		ssNum.setBackground(Color.black);
+		ssNum.setForeground(Color.green);
+		ssNum.setBorder(new LineBorder(Color.green, 1));
+		ssNum.setFont(new Font("MV Boli", Font.BOLD, 14));
+        
+        ssNumLabel.setText(ssSlider.getValue() + " Ships");
+		ssNumLabel.setOpaque(true);
+		ssNumLabel.setBackground(Color.black);
+		ssNumLabel.setForeground(Color.green);
+		ssNumLabel.setFont(new Font("MV Boli", Font.PLAIN, 14));
+		ssNumLabel.setBorder(new LineBorder(Color.green, 1));
+
         //ssSlider.addChangeListener(this);
         
-        ssButton.setBounds(65, 100, 100, 25);
-        ssFrame.add(ssButton);
-
+        ssButton.setBounds(65, 180, 100, 25);
         ssButton.addActionListener(e-> setValue(ssSlider.getValue()));
         ssButton.setText("SET");
         ssButton.setFocusable(false);
@@ -356,6 +376,9 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
         
         ssPanel.add(ssSlider);  
         ssPanel.add(ssLabel);
+		ssPanel.add(ssNum);
+		ssPanel.add(ssNumLabel);
+		ssFrame.add(ssButton);
 		ssPanel.setFocusable(false);
 		ssPanel.setOpaque(true);
 		ssPanel.setBackground(Color.black);
@@ -485,5 +508,13 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 
     public int getValue(){
         return this.ssSize;
+    }
+
+	private void setShipNumValue(int x){
+        this.ssShipNum = x;
+    }
+
+    public int getShipNumValue(){
+        return this.ssShipNum;
     }
 }

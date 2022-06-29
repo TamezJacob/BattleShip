@@ -25,11 +25,13 @@ public class BattleShip implements GameState {
     private PlayerScreen player2;
     private MainMenu menu;
     private int shipSize;
+    private int shipNum;
 
     SoundPlayer soundPlayer;
     
     private BattleShip() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
+        this.shipNum = 5;
         soundPlayer = new SoundPlayer();
 		soundPlayer.playMainMenuMusic();
 
@@ -73,6 +75,16 @@ public class BattleShip implements GameState {
                 menu.ssLabel.setText(shipSize + " Units Long");
                 player1Data.setShipSize(shipSize);
                 player2Data.setShipSize(shipSize);
+			}
+		});
+
+        menu.ssNum.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				shipNum = menu.ssNum.getValue();
+                menu.ssNumLabel.setText(shipNum + " Ships");
+                player1Data.setShipNum(shipNum);
+                player2Data.setShipNum(shipNum);
 			}
 		});
 
@@ -174,5 +186,13 @@ public class BattleShip implements GameState {
     
     public int getShipSize(){
         return shipSize;
+    }
+
+    public int getShipNum(){
+        return shipNum;
+    }
+
+    public void setShipNum(int sN){
+        this.shipNum = sN;
     }
 }

@@ -17,12 +17,14 @@ public class PlayerData {
     private ShipColor playerShipColor;
     private BoardColor playerBoardColor;
     private int shipSize;
+    private int shipNum;
 
     PlayerData( PlayerScreen player, int shipSize){
         this.player = player;
         playerShipColor = new ShipColor();
         playerBoardColor = new BoardColor();
         this.shipSize = shipSize;
+        this.shipNum = 5;
     }
 
     /*All the adding and deleting data methods */
@@ -42,7 +44,7 @@ public class PlayerData {
                     System.out.print("\nyou should only click first block to rotate");
                 }
 
-            } else if(shipsLeft() < 5){
+            } else if(shipsLeft() < shipNum){
                 fleet.add(new Ship(a, b, c));
                 setSelfData(a, b, c);
             }
@@ -92,7 +94,6 @@ public class PlayerData {
         }
         fleet.add(new Ship(aNew, bNew, cNew));
         setSelfData(aNew, bNew, cNew);
-        System.out.println("SIZE SIZE: "+this.shipSize);
     }
 
     // attackShip searched goes through the array and tries to attack every point of every ship. If there is a match it will be marked in the ship object
@@ -358,5 +359,13 @@ public class PlayerData {
 
     public int getShipSize(){
         return this.shipSize;
+    }
+
+    public void setShipNum(int sN){
+        this.shipNum = sN;
+    }
+
+    public int getShipNum(){
+        return this.shipNum;
     }
 }
