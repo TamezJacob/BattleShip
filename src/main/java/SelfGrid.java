@@ -54,6 +54,8 @@ public class SelfGrid extends BattleGrid {
         firstCell.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                Coordinate a, b, c;
+
                 if(isSelfGridListener) {
                     firstPoint = firstCell.getLocation();
                     double xPos = (firstPoint.getX()/20+1);
@@ -76,9 +78,21 @@ public class SelfGrid extends BattleGrid {
 
                     secondNextPoint = new Point((int)(firstPoint.getX()+20),(int)(firstPoint.getY()));
                     thirdNextPoint = new Point((int)(firstPoint.getX()+40),(int)(firstPoint.getY()));
-                    Coordinate a = new Coordinate(x,y);
-                    Coordinate b = new Coordinate(x2,y2);
-                    Coordinate c = b;
+                    
+                    if(battleShip.getShipSize() == 1) {
+                        a = new Coordinate(x,y);
+                        b = a;
+                        c = b;
+                    }else if(battleShip.getShipSize() == 2){
+                        a = new Coordinate(x,y);
+                        b = new Coordinate(x2,y2);
+                        c = b;
+                    }else{
+                        a = new Coordinate(x,y);
+                        b = new Coordinate(x2,y2);
+                        c = new Coordinate(x3,y3);
+                    }
+
 
                     getComp2(secondNextPoint);
                     getComp3(thirdNextPoint);

@@ -1,6 +1,8 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.sound.sampled.*;
+import javax.swing.event.*;
+
 import java.util.Scanner;
 import java.io.*;
 
@@ -22,6 +24,7 @@ public class BattleShip implements GameState {
     public PlayerScreen player1 ;
     private PlayerScreen player2;
     private MainMenu menu;
+    private int shipSize;
 
     SoundPlayer soundPlayer;
     
@@ -33,8 +36,8 @@ public class BattleShip implements GameState {
         menu = new MainMenu();
         player1 = new PlayerScreen("Player1", false,this, soundPlayer);
         player2 = new PlayerScreen("Player2", false,this, soundPlayer);
-        player1Data = new PlayerData(player1);
-        player2Data = new PlayerData(player2);
+        player1Data = new PlayerData(player1, shipSize);
+        player2Data = new PlayerData(player2, shipSize);
         beginningOfTheGame = new BeginningOfTheGame(this, player1,player2);
         middleOfTheGame = new MiddleOfTheGame(this, player1,player2);
         endOfTheGame = new EndOFTheGame(this, player1,player2);
@@ -62,6 +65,16 @@ public class BattleShip implements GameState {
                 }
             }
         );
+
+        menu.ssSlider.addChangeListener(new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				shipSize = menu.ssSlider.getValue();
+                menu.ssLabel.setText(shipSize + " Units Long");
+                player1Data.setShipSize(shipSize);
+                player2Data.setShipSize(shipSize);
+			}
+		});
 
         player1.musicBox.addActionListener(new ActionListener() {
             @Override
@@ -159,4 +172,7 @@ public class BattleShip implements GameState {
         soundPlayer.playMissSoundEffect();
     }
     
+    public int getShipSize(){
+        return shipSize;
+    }
 }
