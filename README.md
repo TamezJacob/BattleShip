@@ -118,6 +118,7 @@
 	- Implement save game feature
 	- Implement load in-progress game feature
 	- Further improvement of the GUI menu to make it look more neat/clean
+	- Further improvement of the game screen, possible making the board 3D
 
 - Adrian
 
