@@ -1,0 +1,5 @@
+While attempting to make the ship size larger, I came into a large issue with the majority of the code being hardcoded in.
+
+I spoke to Dr. Lehr during office hours and he instructed me to attempt to make them smaller instead. This was a much more achievable task, and I was able to complete such with the BSCA-36 branch.
+
+Anything to make the ships interchangably bigger or smaller would require a complete re-work to the code. I also left in the code for the slider in case time permits to refactor the program.
