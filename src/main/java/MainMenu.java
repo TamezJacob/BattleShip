@@ -46,8 +46,8 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 	private JButton next3;
 	private JButton next4;
 	private JFrame ssFrame;
-	private JSlider ssSlider;
-	private JLabel ssLabel;
+	public JSlider ssSlider;
+	public JLabel ssLabel;
 	private JPanel ssPanel;
 	public JButton ssButton;
 	private JButton ssMenuButton;
@@ -261,7 +261,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		readyForB.setBorder(new LineBorder(Color.green, 1)); 
 
 		Play.add(start);
-		//Play.add(ssMenuButton);
+		Play.add(ssMenuButton);
 	    Play.add(play1);
 		Play.add(combo);
 		Play.add(readyForB);
@@ -322,7 +322,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 
 		ssFrame.setBackground(Color.black);
 
-        ssSlider = new JSlider(JSlider.HORIZONTAL, 3, 8, 3);  
+        ssSlider = new JSlider(JSlider.HORIZONTAL, 1, 3, 3);  
         ssSlider.setMinorTickSpacing(1);  
         ssSlider.setMajorTickSpacing(2);  
         ssSlider.setPaintTicks(true);  
@@ -340,7 +340,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		ssLabel.setFont(new Font("MV Boli", Font.PLAIN, 14));
 		ssLabel.setBorder(new LineBorder(Color.green, 1));
 
-        ssSlider.addChangeListener(this);
+        //ssSlider.addChangeListener(this);
         
         ssButton.setBounds(65, 100, 100, 25);
         ssFrame.add(ssButton);
@@ -401,7 +401,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		else if(e.getSource()==instructions1) {
 			mainMenu.setVisible(true);
 			Instructions.setVisible(false);
-			frame.setSize(300, 200);
+			frame.setSize(300, 250);
 		}
 		else if(e.getSource()==play) {
 			mainMenu.setVisible(false);
@@ -411,7 +411,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		else if(e.getSource()==play1) {
 			mainMenu.setVisible(true);
 			Play.setVisible(false);
-			frame.setSize(300, 200);
+			frame.setSize(300, 250);
 		}
 		else if(e.getSource()==ssMenuButton) {
 			ssFrame.setVisible(true);
@@ -438,7 +438,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		else if(e.getSource()==instructions2) {
 			mainMenu.setVisible(true);
 			Instructions1.setVisible(false);
-			frame.setSize(300, 200);
+			frame.setSize(300, 250);
 		}
 		else if(e.getSource()==next2) {
 			Instructions2.setVisible(true);
@@ -448,7 +448,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		else if(e.getSource()==instructions3) {
 			mainMenu.setVisible(true);
 			Instructions2.setVisible(false);
-			frame.setSize(300, 200);
+			frame.setSize(300, 250);
 		}
 		else if(e.getSource()==next3) {
 			Instructions3.setVisible(true);
@@ -458,7 +458,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		else if(e.getSource()==instructions4) {
 			mainMenu.setVisible(true);
 			Instructions3.setVisible(false);
-			frame.setSize(300, 200);
+			frame.setSize(300, 250);
 		}
 		else if(e.getSource()==next4) {
 			Instructions4.setVisible(true);
@@ -468,7 +468,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		else if(e.getSource()==instructions5) {
 			mainMenu.setVisible(true);
 			Instructions4.setVisible(false);
-			frame.setSize(300, 200);
+			frame.setSize(300, 250);
 		}
 	}
 

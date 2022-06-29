@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import static sun.jvm.hotspot.ui.AnnotatedMemoryPanel.colors;
+//import static sun.jvm.hotspot.ui.AnnotatedMemoryPanel.colors;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
@@ -21,6 +21,7 @@ public class PlayerScreen extends JFrame {
     JComboBox playerColorBox;
     JCheckBox musicBox;
     String[] playerColorChoices = {"Cyan", "Red", "Blue", "Yellow", "Green"};
+    String[] boardColorChoices = {"White","Cyan", "Red", "Blue", "Yellow", "Green"};
     SoundPlayer soundPlayer;
 
     public PlayerScreen(String name, boolean show,BattleShip battleShip, SoundPlayer soundPlayer) {
@@ -61,15 +62,17 @@ public class PlayerScreen extends JFrame {
                                          }
         );
 
-        JComboBox ColorListBox = new JComboBox(playerColorChoices);
+        JComboBox ColorListBox = new JComboBox(boardColorChoices);
         ColorListBox.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == ColorListBox) {
                     System.out.println(ColorListBox.getSelectedItem());
                     if (name.equals("Player1")) {
                         battleShip.getPlayer1Data().setBoardColor((ColorListBox.getSelectedItem().toString()));
+                        getSelfGrid().draw();
                     } else {
                         battleShip.getPlayer2Data().setBoardColor((ColorListBox.getSelectedItem().toString()));
+                        getSelfGrid().draw();
                     }
                 }
 

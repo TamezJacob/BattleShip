@@ -4,7 +4,7 @@ public class BoardColor {
 
     private Color BoardColor;
 
-    BoardColor() { this.BoardColor = Color.blue;
+    BoardColor() { this.BoardColor = Color.white;
     }
 
     BoardColor(Color BoardColor) {
@@ -21,6 +21,9 @@ public class BoardColor {
 
     void setBoardColor(String colorString){
         switch (colorString) {
+            case "White":
+                setBoardColor(Color.white);
+                break;
             case "Cyan":
                 setBoardColor(Color.cyan);
                 break;
@@ -28,7 +31,7 @@ public class BoardColor {
                 setBoardColor(Color.red);
                 break;
             case "Blue":
-                setBoardColor(Color.blue);
+                setBoardColor(new Color(51,153,255));
                 break;
             case "Yellow":
                 setBoardColor(Color.yellow);

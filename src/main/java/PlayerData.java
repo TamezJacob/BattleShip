@@ -16,11 +16,13 @@ public class PlayerData {
     private ArrayList<Ship> fleet = new ArrayList<>();
     private ShipColor playerShipColor;
     private BoardColor playerBoardColor;
+    private int shipSize;
 
-    PlayerData( PlayerScreen player){
+    PlayerData( PlayerScreen player, int shipSize){
         this.player = player;
         playerShipColor = new ShipColor();
         playerBoardColor = new BoardColor();
+        this.shipSize = shipSize;
     }
 
     /*All the adding and deleting data methods */
@@ -73,11 +75,24 @@ public class PlayerData {
 
     //add ship vertically to selfData and fleet of ships
     public void addVerticalShip(Coordinate a, Coordinate b, Coordinate c){
-        Coordinate aNew = new Coordinate(a.getX(), a.getY());
-        Coordinate bNew = new Coordinate(a.getX(), a.getY() + 1);
-        Coordinate cNew = new Coordinate(a.getX(), a.getY() + 2);
+        Coordinate aNew, bNew, cNew;
+
+        if(this.shipSize == 1){
+            aNew = new Coordinate(a.getX(), a.getY());
+            bNew = aNew;
+            cNew = bNew;
+        }else if(this.shipSize == 2){
+            aNew = new Coordinate(a.getX(), a.getY());
+            bNew = new Coordinate(a.getX(), a.getY() + 1);
+            cNew = bNew;
+        }else{
+            aNew = new Coordinate(a.getX(), a.getY());
+            bNew = new Coordinate(a.getX(), a.getY() + 1);
+            cNew = new Coordinate(a.getX(), a.getY() + 2);
+        }
         fleet.add(new Ship(aNew, bNew, cNew));
         setSelfData(aNew, bNew, cNew);
+        System.out.println("SIZE SIZE: "+this.shipSize);
     }
 
     // attackShip searched goes through the array and tries to attack every point of every ship. If there is a match it will be marked in the ship object
@@ -335,5 +350,13 @@ public class PlayerData {
             }
             System.out.println();
         }
+    }
+
+    public void setShipSize(int sS){
+        this.shipSize = sS;
+    }
+
+    public int getShipSize(){
+        return this.shipSize;
     }
 }
