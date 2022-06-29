@@ -115,6 +115,9 @@
 - Curtis
 
 - Alex
+	- Implement save game feature
+	- Implement load in-progress game feature
+	- Further improvement of the GUI menu to make it look more neat/clean
 
 - Adrian
 
