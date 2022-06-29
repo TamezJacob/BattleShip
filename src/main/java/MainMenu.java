@@ -261,7 +261,7 @@ public class MainMenu extends JFrame implements ActionListener, ChangeListener {
 		readyForB.setBorder(new LineBorder(Color.green, 1)); 
 
 		Play.add(start);
-		//Play.add(ssMenuButton);
+		Play.add(ssMenuButton);
 	    Play.add(play1);
 		Play.add(combo);
 		Play.add(readyForB);
