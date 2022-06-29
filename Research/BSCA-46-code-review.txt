@@ -1,0 +1,1 @@
+Reviewed code with all five group members on during group breakout sessions on 06/28/22 and went over needed changes and the best approach moving forward, We decided which features we would be demoing and what expected changes we would have to cut from the project.
