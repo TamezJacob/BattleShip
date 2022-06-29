@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-//import static sun.jvm.hotspot.ui.AnnotatedMemoryPanel.colors;
+import static sun.jvm.hotspot.ui.AnnotatedMemoryPanel.colors;
 
 /**
  * @author Danil Kolesnikov danil.kolesnikov@sjsu.edu
