@@ -1,6 +1,6 @@
 # Battle Space Ship
  <!-- If you have the project hosted somewhere, include the link here. -->
-    
+
 ## Sprint 1  
 
 - Curtis  
@@ -75,7 +75,7 @@
 	- Integrate changes to board size with slider to ensure no collisions.
 	- Make the ship slider theme more similar to main menu theme.
 	- Preform debugging tasks.
-	
+
 ## Sprint 2  
 
 - Curtis
@@ -85,7 +85,7 @@
   	- [BSCA-48](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-48) Implemented a feature in the AttackGrid.java class so that cells temporarily turn gray when the mouse is hovered over it.  
   	- [BSCA-47](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-47) Team meeting, discussed features and issues with team during class.
 	- [BSCA-49](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-49) Bugfixed an issue whenever ships were rotating during the game setup. Bugfixed the board color not immediately applying color changes. Implemented ship size slider in the main menu and game.  
-    
+
 - Alex  
 	- [BSCA-31](https://cs3398su22gorns.atlassian.net/browse/BSCA-31) Combining Main Menu with Author's code
 	- [BSCA-32](https://cs3398su22gorns.atlassian.net/browse/BSCA-32) Connecting the Play Button with the Board/Game
@@ -96,22 +96,21 @@
 	- [Name of Issue](Link to issue)  
 	- [Name of Issue](Link to issue)  
 	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue) 
+	- [Name of Issue](Link to issue)
 
 - Bryce  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue) 
+	- [BCSA-43](https://cs3398su22gorns.atlassian.net/browse/BSCA-43) Added ability to change board color. Note: had to make small edits in Bitbucket to fix merge conflict after initial commit.
+	- [BCSA-44](https://cs3398su22gorns.atlassian.net/browse/BSCA-44) Planned on building upon Curtis' work and adding additional sound effects but ran out of time.
+	- [BCSA-46](https://cs3398su22gorns.atlassian.net/browse/BSCA-46) Committed a txt file containing brief rundown of team meeting today
 
 - Jacob  
 	- [Name of Issue](Link to issue)  
 	- [Name of Issue](Link to issue)  
 	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue) 
-	
+	- [Name of Issue](Link to issue)
+
 ## Next Steps for Sprint 3
-	
+
 - Curtis
 
 - Alex
@@ -123,6 +122,9 @@
 - Adrian
 
 - Bryce
+  - Implement a shot timer to standardize gameplay
+  - Finish implementing additional sound effects
+  - Refactor to allow a single game-state instead of switching between two player game-states
 
 - Jacob
 
@@ -202,7 +204,7 @@ List the ready features here:
 
 
 
-	## Music and Sound EFfect Sources: 
+	## Music and Sound EFfect Sources:
 
 	[Main Menu Music](https://soundcloud.com/pitchforkemporium/space-battleship-yamato-8-bit-remix-wip?in=jorge-jaimes-guevara/sets/vdg)  
 	[Battle Music](https://soundcloud.com/bsbsoundtracks/8-bit-battle)  
