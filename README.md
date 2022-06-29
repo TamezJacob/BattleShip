@@ -43,7 +43,7 @@
 	- [BSCA-4](https://cs3398su22gorns.atlassian.net/browse/BSCA-4) Created UML Diagram.
 
 
-## Next Steps for Sprint 2
+## Steps for Sprint 2
 
 - Curtis   
 	- Bugfix for the implementation of changing ship color accross every game state.  
@@ -104,10 +104,10 @@
 	- [BCSA-46](https://cs3398su22gorns.atlassian.net/browse/BSCA-46) Committed a txt file containing brief rundown of team meeting today
 
 - Jacob  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)
+	- [BCSA-35](https://cs3398su22gorns.atlassian.net/browse/BSCA-35)  Connect ship size slider to main menu.
+	- [BCSA-36](https://cs3398su22gorns.atlassian.net/browse/BSCA-36)  Implement different sized ships.
+	- [BCSA-42](https://cs3398su22gorns.atlassian.net/browse/BSCA-42)  Meet with team to discuss sprint and demo.
+
 
 ## Next Steps for Sprint 3
 
@@ -127,6 +127,9 @@
   - Refactor to allow a single game-state instead of switching between two player game-states
 
 - Jacob
+  - Allow more colors for ships.
+  - Create a slider to lower the master volume.
+  - Try to make ship sizes more scalable by re-working the code.
 
 ## Description
 - Who you’re working with (you and your team members)?
