@@ -48,6 +48,7 @@ public class SelfGrid extends BattleGrid {
         JPanel firstCell = new JPanel();
         firstCell.setBorder(BorderFactory.createLineBorder(Color.blue, 2));
         firstCell.setPreferredSize(new Dimension(20, 20)); // for demo purposes only
+        //firstCell.setBackground(Color.white);
         firstCell.setBackground(Color.white);
 
         firstCell.addMouseListener(new MouseAdapter() {
@@ -132,7 +133,8 @@ public class SelfGrid extends BattleGrid {
                    Point p = new Point(Math.abs(x),Math.abs(y));
                    getJpanel(p);
 
-                   thePanel.setBackground(Color.WHITE);
+                   //thePanel.setBackground(Color.WHITE);
+                   thePanel.setBackground(tempPlayer.getBoardColor());
 
                 }
             }

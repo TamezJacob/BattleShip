@@ -15,10 +15,12 @@ public class PlayerData {
     private int numberOfShipSunk = 0;
     private ArrayList<Ship> fleet = new ArrayList<>();
     private ShipColor playerShipColor;
+    private BoardColor playerBoardColor;
 
     PlayerData( PlayerScreen player){
         this.player = player;
         playerShipColor = new ShipColor();
+        playerBoardColor = new BoardColor();
     }
 
     /*All the adding and deleting data methods */
@@ -308,6 +310,18 @@ public class PlayerData {
 
     public Color getShipColor() {
         return this.playerShipColor.getShipColor();
+    }
+
+    public void setBoardColor(Color BoardColor) {
+        this.playerBoardColor.setBoardColor(BoardColor);
+    }
+
+    public void setBoardColor(String BoardColor) {
+        this.playerBoardColor.setBoardColor(BoardColor);
+    }
+
+    public Color getBoardColor() {
+        return this.playerBoardColor.getBoardColor();
     }
 
 
