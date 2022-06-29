@@ -58,9 +58,9 @@ public class PlayerScreen extends JFrame {
                                             if (e.getSource() == ColorListBox) {
                                                 System.out.println(ColorListBox.getSelectedItem());
                                                 if (name.equals("Player1")) {
-                                                    battleShip.getPlayer1Data().setBoardColor((ColorListBox.getSelectedItem().toString()));                // Only works in beginning game state
+                                                    battleShip.getPlayer1Data().setBoardColor((ColorListBox.getSelectedItem().toString()));                
                                                 } else {
-                                                    battleShip.getPlayer2Data().setBoardColor((ColorListBox.getSelectedItem().toString()));                // Only works in beginning game state
+                                                    battleShip.getPlayer2Data().setBoardColor((ColorListBox.getSelectedItem().toString()));               
                                                 }
                                             }
 
@@ -108,7 +108,6 @@ public class PlayerScreen extends JFrame {
         verticalBox.add(horizontalBox4);
 
         Box horizontalBox5 = Box.createHorizontalBox();
-        //colors = {"Blue", "Red", "Green", "Yellow"};
 
         horizontalBox5.add(new JLabel("                            " +
                 "                        Board Color: "));
