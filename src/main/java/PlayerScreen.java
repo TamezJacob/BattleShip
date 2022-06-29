@@ -58,8 +58,22 @@ public class PlayerScreen extends JFrame {
                 }
             }
         );
-        
 
+        JComboBox ColorListBox = new JComboBox(playerColorChoices);
+        ColorListBox.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == ColorListBox) {
+                    System.out.println(ColorListBox.getSelectedItem());
+                    if (name.equals("Player1")) {
+                        battleShip.getPlayer1Data().setBoardColor((ColorListBox.getSelectedItem().toString()));
+                    } else {
+                        battleShip.getPlayer2Data().setBoardColor((ColorListBox.getSelectedItem().toString()));
+                    }
+                }
+
+            }
+        }
+        );
 
         Box verticalBox = Box.createVerticalBox();
 
@@ -106,11 +120,11 @@ public class PlayerScreen extends JFrame {
         verticalBox.add(horizontalBox4);
 
         Box horizontalBox5 = Box.createHorizontalBox();
-        String[] colors = {"Blue","Red","Green","Yellow"};
-        JComboBox colorList = new JComboBox(colors);
+
+
         horizontalBox5.add(new JLabel("                            " +
                 "                        Board Color: "));
-        horizontalBox5.add(colorList);
+        horizontalBox5.add(ColorListBox);
         JLabel boardColorLabelBlank = new JLabel("                            " +
                 "                            ");
         horizontalBox5.add(boardColorLabelBlank);

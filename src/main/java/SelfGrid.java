@@ -132,7 +132,7 @@ public class SelfGrid extends BattleGrid {
                    Point p = new Point(Math.abs(x),Math.abs(y));
                    getJpanel(p);
 
-                   thePanel.setBackground(Color.WHITE);
+                   thePanel.setBackground(tempPlayer.getBoardColor());
 
                 }
             }
