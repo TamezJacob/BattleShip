@@ -1,41 +1,6 @@
 # Battle Space Ship
  <!-- If you have the project hosted somewhere, include the link here. -->
-
-## Sprint 2  
-
--Curtis
-  	-[BSCA-40](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-40) Created a guide for team members to implement GUI features. Placed guide in the "Research"  folder under "Project Notes.md".  
-  	-[BSCA-39](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-39) Bugfixed the ship colors implementation not working accross all game states, as well as not immediately updating after selecting a color.  
-  	-[BSCA-41](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-41) Implemented music and sound effects. Created a SoundPlayer.java class which controls the sound effects and music. Implemented GUI buttons of enabling/disabling music.  
-  	-[BSCA-48](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-48) Implemented a feature in the AttackGrid.java class so that cells temporarily turn gray when the mouse is hovered over it.  
-  	-[BSCA-47](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-47) Team meeting, discussed features and issues with team during class.
-	-[BSCA-49](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-49) Bugfixed an issue whenever ships were rotating during the game setup. Bugfixed the board color not immediately applying color changes. Implemented ship size slider in the main menu and game.  
     
--Alex  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-
--Adrian  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue) 
-
--Bryce  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue) 
-
--Jacob  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue)  
-	-[Name of Issue](Link to issue) 
-  
-  
 ## Sprint 1  
 
 - Curtis  
@@ -110,6 +75,52 @@
 	- Integrate changes to board size with slider to ensure no collisions.
 	- Make the ship slider theme more similar to main menu theme.
 	- Preform debugging tasks.
+	
+## Sprint 2  
+
+-Curtis
+  	-[BSCA-40](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-40) Created a guide for team members to implement GUI features. Placed guide in the "Research"  folder under "Project Notes.md".  
+  	-[BSCA-39](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-39) Bugfixed the ship colors implementation not working accross all game states, as well as not immediately updating after selecting a color.  
+  	-[BSCA-41](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-41) Implemented music and sound effects. Created a SoundPlayer.java class which controls the sound effects and music. Implemented GUI buttons of enabling/disabling music.  
+  	-[BSCA-48](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-48) Implemented a feature in the AttackGrid.java class so that cells temporarily turn gray when the mouse is hovered over it.  
+  	-[BSCA-47](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-47) Team meeting, discussed features and issues with team during class.
+	-[BSCA-49](https://cs3398su22gorns.atlassian.net/jira/software/projects/BSCA/boards/3?selectedIssue=BSCA-49) Bugfixed an issue whenever ships were rotating during the game setup. Bugfixed the board color not immediately applying color changes. Implemented ship size slider in the main menu and game.  
+    
+-Alex  
+	-[BSCA-31](https://cs3398su22gorns.atlassian.net/browse/BSCA-31) Combining Main Menu with Author's code
+	-[BSCA-32](https://cs3398su22gorns.atlassian.net/browse/BSCA-32) Connecting the Play Button with the Board/Game
+	-[BSCA-33](https://cs3398su22gorns.atlassian.net/browse/BSCA-33) Adding a Pre-game Screen that Follows after the Play Button
+	-[BSCA-34](https://cs3398su22gorns.atlassian.net/browse/BSCA-34) Team Meeting to Discuss Changes/Demo Content
+
+-Adrian  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue) 
+
+-Bryce  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue) 
+
+-Jacob  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue)  
+	-[Name of Issue](Link to issue) 
+	
+## Next Steps for Sprint 3
+	
+-Curtis
+
+-Alex
+
+-Adrian
+
+-Bryce
+
+-Jacob
 
 ## Description
 - Who you’re working with (you and your team members)?
