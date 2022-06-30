@@ -122,14 +122,14 @@
 - Adrian
 
 - Bryce
-  - Implement a shot timer to standardize gameplay
-  - Finish implementing additional sound effects
-  - Refactor to allow a single game-state instead of switching between two player game-states
+  	- Implement a shot timer to standardize gameplay
+  	- Finish implementing additional sound effects
+  	- Refactor to allow a single game-state instead of switching between two player game-states
 
 - Jacob
-  - Allow more colors for ships.
-  - Create a slider to lower the master volume.
-  - Try to make ship sizes more scalable by re-working the code.
+  	- Allow more colors for ships.
+  	- Create a slider to lower the master volume.
+  	- Try to make ship sizes more scalable by re-working the code.
 
 ## Description
 - Who you’re working with (you and your team members)?
