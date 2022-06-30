@@ -93,11 +93,10 @@
 	- [BSCA-34](https://cs3398su22gorns.atlassian.net/browse/BSCA-34) Team Meeting to Discuss Changes/Demo Content
 
 - Adrian  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)  
-	- [Name of Issue](Link to issue)
-
+	- [BSCA-29](https://cs3398su22gorns.atlassian.net/browse/BSCA-29) Board bug fix, sending a selected size for graph and making it that size
+	- [BSCA-30](https://cs3398su22gorns.atlassian.net/browse/BSCA-30) Setting up a way to select the board size, using a comboBox
+	- [BSCA-37](https://cs3398su22gorns.atlassian.net/browse/BSCA-37) Team meeting discusing the sprint and how to work forward
+	- [BSCA-38](https://cs3398su22gorns.atlassian.net/browse/BSCA-38) Customize JPanal to match the main menu
 - Bryce  
 	- [BCSA-43](https://cs3398su22gorns.atlassian.net/browse/BSCA-43) Added ability to change board color. Note: had to make small edits in Bitbucket to fix merge conflict after initial commit.
 	- [BCSA-44](https://cs3398su22gorns.atlassian.net/browse/BSCA-44) Planned on building upon Curtis' work and adding additional sound effects but ran out of time.
