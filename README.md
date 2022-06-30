@@ -111,7 +111,10 @@
 
 ## Next Steps for Sprint 3
 
-- Curtis
+- Curtis  
+	- Refactor code for ease of future feature implementation  
+	- Implement multiple, different ship sizes for a game  
+	- Allow the user to play against the computer; the opponent randomly selects cells on the game board, prioritizing cell near recent hits  
 
 - Alex
 	- Implement save game feature
