@@ -120,6 +120,10 @@
 	- Further improvement of the game screen, possible making the board 3D
 
 - Adrian
+	- Rework whole code to be easier to add and take out features
+	- Open two different GUI's so that one player can be on one panel and the second player can be on the other panel
+	- Add small GIF ships to add a bit more animation to the code
+	- Add spacers so ships cant be right next to each other
 
 - Bryce
   	- Implement a shot timer to standardize gameplay
